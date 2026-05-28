@@ -1,0 +1,840 @@
+{
+  "metadata": {
+    "title": "NeedALoanToday - Prêts personnels rapides au Canada | Approbation instantanée et taux compétitifs",
+    "description": "NeedALoanToday : Obtenez des prêts personnels instantanés au Canada avec des taux compétitifs et une approbation le jour même. Demande en ligne simple, approbation par IA et solutions de prêt de confiance.",
+    "keywords": "needaloantoday, besoin d'un prêt aujourd'hui, prêts personnels Canada, prêts rapides, approbation rapide, prêts instantanés, financement le jour même, taux compétitifs, demande de prêt en ligne, prêt canadien, prêts d'urgence, prêts pour mauvais crédit, approbation de prêt par IA",
+    "ogTitle": "NeedALoanToday - Prêts personnels rapides au Canada",
+    "ogDescription": "Obtenez des prêts personnels instantanés avec des taux compétitifs et une approbation le jour même. Demande par IA, processus sécurisé et solutions de prêt de confiance pour les Canadiens.",
+    "about": {
+      "title": "À propos de nous | NeedALoanToday - Notre mission et vision",
+      "description": "Découvrez la mission de NeedALoanToday pour démocratiser les services financiers. Apprenez-en plus sur notre histoire, nos valeurs et comment nous avons aidé plus de 50 000 Canadiens."
+    },
+    "contact": {
+      "title": "Contactez-nous | NeedALoanToday - Nous sommes là pour vous aider",
+      "description": "Vous avez des questions sur nos prêts ? Contactez notre équipe par téléphone, par e-mail ou visitez notre bureau de Toronto. Support rapide et conseils d'experts."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité | NeedALoanToday - Vos données sont sécurisées",
+      "description": "Lisez notre politique de confidentialité pour comprendre comment nous collectons, utilisons et protégeons vos informations personnelles. Sécurité de niveau bancaire."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation | NeedALoanToday - Accord juridique",
+      "description": "Consultez les conditions d'utilisation des services de NeedALoanToday. Conditions de prêt transparentes et accords juridiques clairs."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "À propos de NeedALoanToday",
+      "title1": "Redéfinir la façon dont",
+      "title2": "Le prêt fonctionne",
+      "description": "Fondée en 2016, NeedALoanToday est passée d'une petite startup fintech à un prêteur numérique de confiance — au service de plus de 50 000 emprunteurs et ayant décaissé plus de 500 000 $ en prêts.",
+      "stats": {
+        "totalFunded": "Total financé",
+        "borrowers": "Emprunteurs",
+        "states": "États",
+        "rating": "Note"
+      },
+      "floatingCard": {
+        "title": "Approuvé par des milliers",
+        "subtitle": "Prêt rapide, sécurisé et transparent"
+      },
+      "avatarAlt": "Avatar client {index}"
+    },
+    "mission": {
+      "title": "Notre mission",
+      "description": "Démocratiser l'accès aux services financiers en rendant les prêts plus rapides, plus équitables et plus transparents. Nous pensons qu'une demande de prêt ne devrait pas prendre des semaines — elle devrait prendre quelques minutes."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "description": "Un monde où chacun a accès à un crédit équitable et abordable. Nous envisageons un avenir où les prêts basés sur l'IA permettent aux particuliers et aux entreprises d'atteindre leurs objectifs financiers sans obstacles."
+    },
+    "values": {
+      "badge": "Nos valeurs",
+      "heading": "Ce qui nous fait avancer",
+      "transparency": {
+        "title": "Transparence",
+        "desc": "Pas de frais cachés, pas de surprises. Chaque taux, terme et condition est clairement communiqué dès le départ."
+      },
+      "accessibility": {
+        "title": "Accessibilité",
+        "desc": "Nous croyons que chacun mérite un accès à un financement équitable, quelle que soit son origine."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Nous exploitons l'IA et la technologie de pointe pour rendre les prêts plus rapides et plus intelligents."
+      },
+      "community": {
+        "title": "Communauté",
+        "desc": "Nous investissons dans des programmes d'éducation financière et soutenons les communautés locales à travers le pays."
+      }
+    },
+    "timeline": {
+      "badge": "Notre parcours",
+      "heading": "Une décennie d'impact",
+      "2016": {
+        "title": "Fondation",
+        "desc": "Démarré avec une mission de simplifier les prêts personnels."
+      },
+      "2018": {
+        "title": "Expansion",
+        "desc": "Étendu à tous les 50 états."
+      },
+      "2020": {
+        "title": "Lancement IA",
+        "desc": "Introduction de l'analyse de crédit instantanée basée sur l'IA."
+      },
+      "2022": {
+        "title": "50K utilisateurs",
+        "desc": "Atteint cinquante mille emprunteurs inscrits."
+      },
+      "2024": {
+        "title": "500K$ financés",
+        "desc": "Décaissé plus d'un demi-million en prêts totaux."
+      },
+      "2026": {
+        "title": "Croissance",
+        "desc": "Poursuite de l'expansion de nos services."
+      }
+    }
+  },
+  
+  "contact": {
+    "hero": {
+      "badge": "Nous contacter",
+      "title1": "Nous serions ravis",
+      "title2": "de vous entendre",
+      "description": "Que vous ayez une question sur un prêt, besoin d'assistance technique ou souhaitiez explorer un partenariat — notre équipe est prête à vous aider."
+    },
+    "info": {
+      "phone": {
+        "title": "Appelez-nous",
+        "detail": "+1 (800) 555-LOAN",
+        "sub": "Lun-Ven, 8h-20h EST"
+      },
+      "email": {
+        "title": "Écrivez-nous",
+        "detail": "hello@needaloantoday.com",
+        "sub": "Nous répondons en 2 heures"
+      },
+      "location": {
+        "title": "Visitez-nous",
+        "detail": "Toronto, ON",
+        "sub": "Canada"
+      },
+      "hours": {
+        "title": "Heures d'ouverture",
+        "detail": "Lun-Ven : 8h - 20h",
+        "sub": "Sam : 9h - 17h EST"
+      }
+    },
+    "form": {
+      "heading": "Envoyez-nous un message",
+      "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 2 heures ouvrables.",
+      "fields": {
+        "name": {
+          "label": "Nom complet",
+          "placeholder": "Jean Dupont"
+        },
+        "email": {
+          "label": "Adresse e-mail",
+          "placeholder": "jean@exemple.com"
+        },
+        "phone": {
+          "label": "Numéro de téléphone",
+          "placeholder": "+1 (555) 000-0000"
+        },
+        "subject": {
+          "label": "Sujet",
+          "placeholder": "Demande de prêt"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Dites-nous comment nous pouvons vous aider..."
+        }
+      },
+      "button": "Envoyer le message"
+    },
+    "support": {
+      "heading": "Comment pouvons-nous vous aider ?",
+      "general": {
+        "title": "Demande générale",
+        "desc": "Questions sur nos produits, services ou entreprise."
+      },
+      "loan": {
+        "title": "Support de prêt",
+        "desc": "Aide avec une demande existante ou un compte de prêt."
+      },
+      "partnership": {
+        "title": "Partenariat d'affaires",
+        "desc": "Intéressé par un partenariat ou une intégration avec NeedALoanToday."
+      },
+      "press": {
+        "title": "Presse et médias",
+        "desc": "Demandes des médias, dossiers de presse et demandes d'entrevue."
+      }
+    },
+    "faq": {
+      "heading": "Avez-vous encore des questions ?",
+      "description": "Consultez notre section FAQ complète pour des réponses instantanées aux questions courantes.",
+      "button": "Voir la FAQ"
+    }
+  },
+   "privacy": {
+    "hero": {
+      "badge": "Votre vie privée compte",
+      "title": "Politique de confidentialité",
+      "description": "Nous reconnaissons l'importance de protéger vos données personnelles et apprécions la confiance que vous nous accordez. Cette politique explique notre approche en matière de collecte, d'utilisation et de protection des informations que vous fournissez lors de l'utilisation de nos services.",
+      "acceptance": "Votre utilisation de notre plateforme constitue l'acceptation des pratiques de confidentialité décrites ci-dessous.",
+      "features": {
+        "encryption": "Chiffrement SSL 256 bits",
+        "security": "Sécurité bancaire",
+        "transparency": "Pratiques transparentes"
+      }
+    },
+    "sections": {
+      "dataProtection": {
+        "title": "Mesures de protection des données",
+        "content": "Notre engagement envers la sécurité des données comprend la mise en œuvre de protocoles de chiffrement avancés conformes aux normes de l'industrie financière. Nous utilisons la technologie SSL pour protéger la transmission d'informations sensibles, y compris les détails financiers et personnels. Nous examinons et améliorons régulièrement notre infrastructure de sécurité pour maintenir le plus haut niveau de protection des données pour nos utilisateurs."
+      },
+      "internalAccess": {
+        "title": "Accès restreint aux informations internes",
+        "content": "Seul le personnel désigné avec l'autorisation appropriée peut accéder aux informations des clients. Chaque membre de l'équipe ayant des privilèges d'accès aux données doit suivre une vérification approfondie des antécédents avant de recevoir l'autorisation.",
+        "subtext": "Ce cadre d'accès contrôlé garantit que les informations sont traitées exclusivement à des fins commerciales légitimes, notamment :",
+        "list": [
+          "Traitement des demandes",
+          "Amélioration des services",
+          "Évaluation du crédit",
+          "Assistance à la clientèle"
+        ]
+      },
+      "thirdParty": {
+        "title": "Divulgation d'informations à des tiers",
+        "content": "Pour traiter votre demande, maintenir votre compte et fournir nos services efficacement, nous pouvons divulguer vos informations à des partenaires externes sélectionnés. Ceux-ci peuvent inclure :",
+        "list": [
+          "Institutions de prêt",
+          "Agences d'évaluation du crédit",
+          "Agences de recouvrement",
+          "Fournisseurs de services de marketing",
+          "Autres partenaires commerciaux pertinents pour nos opérations"
+        ],
+        "footer": "Toutes les parties externes sont contractuellement tenues de maintenir la confidentialité des données et ne peuvent utiliser vos informations qu'à des fins autorisées liées à votre demande ou aux services associés."
+      },
+      "multiLender": {
+        "title": "Réseau de demandes multi-prêteurs",
+        "content": "Les demandes soumises via notre réseau de partenaires sont distribuées à diverses institutions de prêt et services de courtage pour maximiser vos chances d'approbation. Les informations traitées via ce réseau peuvent être stockées dans des juridictions en dehors de votre province.",
+        "subtext": "Les participants au réseau et leurs affiliés peuvent vous contacter par e-mail, téléphone ou message texte (tarifs des opérateurs applicables). Vous conservez le droit d'interrompre ces communications en répondant HELP pour obtenir de l'aide ou STOP pour cesser les messages."
+      },
+      "phoneAuth": {
+        "title": "Autorisation téléphonique et SMS",
+        "content": "En soumettant votre numéro de téléphone, vous nous accordez l'autorisation de vous contacter par appels vocaux et messages texte. Les communications peuvent inclure :",
+        "list": [
+          "Confirmations de transaction",
+          "Offres spéciales",
+          "Notifications de compte",
+          "Demandes de commentaires",
+          "Autres informations pertinentes concernant votre demande ou l'état de votre compte"
+        ],
+        "footer": "Vous pouvez retirer ce consentement à tout moment en suivant les instructions de désinscription incluses dans les messages texte ou en nous contactant directement en utilisant les coordonnées fournies ci-dessous."
+      },
+      "emailAuth": {
+        "title": "Autorisation de communication par e-mail",
+        "content": "En fournissant votre adresse e-mail, vous consentez à recevoir une correspondance électronique de notre part. Les communications par e-mail peuvent inclure :",
+        "list": [
+          "Messages liés aux transactions",
+          "Contenu promotionnel",
+          "Informations sur le compte",
+          "Invitations à des sondages",
+          "Autres documents pertinents à votre relation avec notre entreprise"
+        ],
+        "footer": "Vous conservez le droit de révoquer le consentement par e-mail quand vous le souhaitez. Des options de désinscription sont disponibles via les liens dans nos e-mails, ou vous pouvez nous contacter directement en utilisant les informations ci-dessous."
+      },
+      "retention": {
+        "title": "Période de conservation des informations",
+        "content": "Les données personnelles seront conservées pendant la durée nécessaire pour atteindre les objectifs décrits dans cette politique et pour se conformer aux exigences légales et réglementaires. Si vous souhaitez demander la suppression de vos informations, veuillez nous contacter en utilisant nos coordonnées ci-dessous."
+      },
+      "cookies": {
+        "title": "Analyse de site Web et cookies",
+        "content": "Nous pouvons déployer des cookies et des technologies similaires pour améliorer votre expérience sur le site Web et analyser les modèles d'utilisation. Des détails supplémentaires sont disponibles dans notre politique de cookies séparée."
+      }
+    },
+    "rights": {
+      "title": "Vos droits en matière de confidentialité",
+      "description": "Vous conservez le droit de consulter, corriger ou demander la suppression des informations personnelles que nous détenons à votre sujet. Pour exercer ces droits ou si vous avez des questions concernant vos données, veuillez nous contacter en utilisant les informations fournies ci-dessous."
+    },
+    "contact": {
+      "heading": "Des questions sur votre vie privée ?",
+      "description": "Pour toute question, préoccupation ou demande concernant votre vie privée ou cette politique, veuillez nous contacter à :",
+      "updated": "Dernière mise à jour : Février 2026"
+    }
+  },
+  "terms": {
+    "hero": {
+      "badge": "Accord juridique",
+      "title": "Conditions d'utilisation",
+      "description": "Veuillez lire attentivement ces conditions avant d'utiliser nos services. En autorisant le remboursement du prêt à partir de votre compte bancaire, vous acceptez d'être lié par ces Conditions d'utilisation."
+    },
+    "notice": {
+      "heading": "Avis important",
+      "description": "En utilisant les services de NeedALoanToday et en autorisant les retraits automatiques de votre compte bancaire, vous reconnaissez avoir lu, compris et accepté d'être lié par ces Conditions d'utilisation. Ces conditions constituent un accord juridiquement contraignant entre vous et NeedALoanToday. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services."
+    },
+    "sections": {
+      "jurisdiction": {
+        "title": "Avis de juridiction",
+        "content": "Toutes les transactions financières effectuées via cette plateforme sont considérées comme se déroulant à notre siège social principal, indépendamment de la situation géographique de l'utilisateur."
+      },
+      "important": {
+        "title": "Informations importantes",
+        "content": "Nos microcrédits sont conçus pour répondre à des besoins financiers immédiats et à court terme. Les clients doivent rembourser intégralement leur prêt existant avant de pouvoir bénéficier d'un financement supplémentaire."
+      },
+      "definitions": {
+        "title": "Définitions",
+        "content": "Tout au long de ces Conditions d'utilisation (« Conditions »), les références à « Client », « vous » ou « votre » identifient la personne qui demande nos services. Les références à « Société », « nous » ou « notre » font référence à NeedALoanToday."
+      },
+      "agreement": {
+        "title": "Votre acceptation de ces conditions",
+        "content": "En autorisant les retraits automatiques de votre compte bancaire désigné pour le remboursement du prêt, vous reconnaissez l'acceptation de ces Conditions. Ces Conditions vous ont été rendues accessibles par plusieurs canaux — y compris notre emplacement physique, notre site Web et par communication directe avec nos représentants — avant que vous ne finalisiez votre transaction."
+      },
+      "electronic": {
+        "title": "Autorisation de transaction électronique",
+        "content": "Vous consentez à notre utilisation de méthodes électroniques pour percevoir les montants dus en vertu de votre accord de prêt. Cela inclut notre droit de soumettre à nouveau des tentatives de recouvrement si les efforts initiaux sont infructueux, que ce soit pour des montants partiels ou le solde complet dû, plus les frais de paiement retourné applicables que nous sommes légalement autorisés à facturer."
+      },
+      "dispute": {
+        "title": "Résolution individuelle des litiges",
+        "content": "Dans la mesure maximale autorisée par la loi applicable, vous acceptez de résoudre tout litige avec nous sur une base individuelle et renoncez à participer à des recours collectifs ou à des procédures consolidées impliquant plusieurs demandeurs. Si vous vous joignez à de telles procédures, vous consentez à des mesures injonctives pour votre retrait. Cette disposition ne limite pas votre droit de poursuivre des recours juridiques individuels qui vous sont disponibles."
+      },
+      "records": {
+        "title": "Dossiers électroniques",
+        "content": "Vous reconnaissez que les communications numériques, les formulaires en ligne, les documents numérisés et les transmissions par télécopie ont le même poids juridique que les documents papier originaux. Votre acceptation peut être démontrée par diverses méthodes, y compris la confirmation verbale (en personne ou par téléphone), la signature électronique, le nom tapé ou d'autres méthodes d'acceptation indiquées, qui créent toutes des obligations contraignantes en vertu de ces Conditions."
+      },
+      "verification": {
+        "title": "Vérification et certification de la demande",
+        "content": "En soumettant votre demande électroniquement ou par téléphone, vous certifiez sous peine de parjure que toutes les informations fournies sont exactes et complètes. Vous confirmez que vous n'êtes actuellement pas soumis à des procédures de faillite et que vous ne prévoyez pas déposer une demande de faillite.",
+        "subtext": "Vous nous autorisez à vérifier les détails de votre demande par l'intermédiaire d'agences d'évaluation du crédit et d'autres méthodes de vérification appropriées. Nous conservons le pouvoir discrétionnaire exclusif de refuser les demandes en fonction de notre évaluation des risques après la diligence raisonnable.",
+        "footer": "Vous comprenez que le traitement nécessite la vérification de votre statut d'emploi, de vos informations bancaires et d'autres détails pertinents. Vous acceptez l'entière responsabilité de la protection de tout numéro d'identification personnel ou identifiant de compte qui vous est émis."
+      }
+    },
+    "contact": {
+      "heading": "Des questions sur nos conditions ?",
+      "description": "Notre équipe juridique est là pour vous aider à clarifier toute question que vous pourriez avoir.",
+      "updated": "Dernière mise à jour : Février 2026"
+    },
+    "acceptance": "En continuant à utiliser les services de NeedALoanToday, vous confirmez votre acceptation de ces Conditions d'utilisation et de toute modification future. Nous vous recommandons de consulter périodiquement ces conditions pour toute mise à jour."
+  },
+   "notFound": {
+    "title": "Page non trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée. Remettons-vous sur la bonne voie.",
+    "buttons": {
+      "home": "Retour à l'accueil",
+      "contact": "Contacter le support"
+    }
+  },
+   "comingSoon": {
+    "badge": "Bientôt disponible",
+    "title": {
+      "part1": "Quelque chose",
+      "highlight": "d'incroyable",
+      "part2": "se prépare"
+    },
+    "description": "Nous travaillons dur pour vous apporter de nouvelles fonctionnalités passionnantes. Soyez le premier informé lors du lancement.",
+    "form": {
+      "placeholder": "Entrez votre e-mail",
+      "button": "Me notifier"
+    },
+    "features": {
+      "aiMatching": {
+        "title": "Correspondance de prêt IA",
+        "desc": "Algorithmes intelligents pour trouver votre prêt parfait"
+      },
+      "instantApproval": {
+        "title": "Pré-approbation instantanée",
+        "desc": "Obtenez une pré-approbation en moins de 60 secondes"
+      },
+      "rateAlerts": {
+        "title": "Alertes de taux",
+        "desc": "Notifications en temps réel lorsque les taux baissent"
+      }
+    },
+    "toast": {
+      "title": "Vous êtes sur la liste !",
+      "description": "Nous vous informerons lorsque cette fonctionnalité sera lancée."
+    },
+    "backButton": "Retour à l'accueil"
+  },
+   "footer": {
+    "tagline": "Rendre les prêts accessibles, rapides et transparents pour tous.",
+    "contact": {
+      "location": "Toronto, ON, Canada"
+    },
+    "sections": {
+      "company": "Entreprise",
+      "products": "Produits",
+      "support": "Support",
+      "legal": "Légal"
+    },
+    "links": {
+      "company": {
+        "about": "À propos de nous",
+        "resources": "Ressources",
+        "loans": "Prêts",
+        "blog": "Blog"
+      },
+      "products": {
+        "home": "Prêts immobiliers",
+        "business": "Prêts commerciaux",
+        "education": "Prêts étudiants",
+        "personal": "Prêts personnels"
+      },
+      "support": {
+        "helpCenter": "Centre d'aide",
+        "contact": "Nous contacter",
+        "faq": "FAQ",
+        "feedback": "Commentaires"
+      },
+      "legal": {
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation"
+      }
+    },
+    "newsletter": {
+      "placeholder": "Entrez votre e-mail",
+      "subscribe": "S'abonner"
+    },
+    "copyright": "© 2026 NeedALoanToday. Tous droits réservés."
+  },
+  "cookieBanner": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic du site et personnaliser le contenu.",
+    "learnMore": "En savoir plus",
+    "decline": "Refuser",
+    "acceptAll": "Tout accepter"
+  },
+   "countdownBanner": {
+    "dayMessages": {
+      "0": "Spécial dimanche ! Postulez maintenant pour une approbation instantanée",
+      "1": "L'élan du lundi ! Commencez votre semaine avec une approbation de prêt",
+      "2": "Offres du mardi ! Obtenez une approbation en quelques minutes",
+      "3": "Offre de mi-semaine ! Postulez maintenant pour une approbation instantanée",
+      "4": "Boost du jeudi ! Approbation rapide disponible aujourd'hui",
+      "5": "Vente flash du vendredi ! Postulez maintenant pour une approbation instantanée",
+      "6": "Économies du samedi ! Approbations de fin de semaine disponibles"
+    },
+    "timeLeft": "Temps restant :",
+    "endsIn": "Se termine dans :",
+    "close": "Fermer la bannière"
+  },
+  "navbar": {
+    "links": {
+      "home": "Accueil",
+      "loans": "Prêts",
+      "resources": "Ressources",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "aria": {
+      "loansDropdown": "Basculer le menu des prêts",
+      "resourcesDropdown": "Basculer le menu des ressources",
+      "languageToggle": "Passer à l'anglais"
+    },
+    "applyNow": "Postuler maintenant",
+    "loans": {
+      "byAmount": {
+        "title": "Par montant",
+        "description": "Prêts de 300 $ à 5 000 $"
+      },
+      "byPurpose": {
+        "title": "Par objectif",
+        "description": "Consolidation de dettes, urgences et plus"
+      },
+      "byCredit": {
+        "title": "Par cote de crédit",
+        "description": "Trouvez des prêts pour votre gamme de crédit"
+      },
+      "byType": {
+        "title": "Par type",
+        "description": "Prêts personnels, d'urgence, le jour même"
+      },
+      "byLocation": {
+        "title": "Par emplacement",
+        "description": "Prêts au Canada"
+      },
+      "allOptions": {
+        "title": "Toutes les options de prêt",
+        "description": "Parcourir tous les prêts disponibles"
+      }
+    },
+    "resources": {
+      "tools": {
+        "title": "Outils",
+        "description": "Calculatrices et outils utiles"
+      },
+      "comparisons": {
+        "title": "Comparaisons",
+        "description": "Comparer les options d'emprunt"
+      },
+      "guides": {
+        "title": "Guides",
+        "description": "Guides de prêt étape par étape"
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Réponses aux questions courantes"
+      },
+      "allResources": {
+        "title": "Toutes les ressources",
+        "description": "Parcourir tous les outils et guides"
+      }
+    }
+  },
+   "loanToasts": {
+    "from": "de",
+    "approved": "Approuvé pour",
+    "minAgo": "min"
+  },
+  "chatbot": {
+    "greeting": "Bonjour ! Je suis là pour vous aider à trouver le prêt parfait. Comment puis-je vous aider aujourd'hui ?",
+    "header": {
+      "title": "Assistant NeedALoanToday",
+      "subtitle": "Répond généralement instantanément"
+    },
+    "quickQuestionsLabel": "Questions rapides :",
+    "inputPlaceholder": "Tapez votre message...",
+    "quickReplies": [
+      "Comment puis-je faire une demande de prêt ?",
+      "Quels sont vos taux d'intérêt ?",
+      "À quelle vitesse puis-je obtenir un financement ?",
+      "Quels documents ai-je besoin ?"
+    ],
+    "responses": {
+      "apply": [
+        "Excellente question ! Postuler est simple - cliquez simplement sur 'Postuler maintenant' et remplissez notre formulaire rapide de 3 minutes. Vous serez jumelé avec des prêteurs instantanément !",
+        "Facile ! Cliquez sur le bouton 'Postuler maintenant', complétez notre courte demande, et nous vous mettrons en contact avec les meilleurs prêteurs pour votre situation.",
+        "Pour postuler, cliquez sur 'Postuler maintenant' en haut de la page. Notre processus simplifié ne prend que quelques minutes et vous verrez vos offres immédiatement !"
+      ],
+      "rates": [
+        "Les taux d'intérêt varient selon le prêteur et votre profil de crédit, allant généralement de 5,99 % à 35,99 % TAP. Postulez pour voir des taux personnalisés sans impact sur votre crédit !",
+        "Les taux dépendent de votre solvabilité et du prêteur choisi. La plupart de nos partenaires offrent des taux entre 5,99 % et 35,99 % TAP. Vérifiez votre taux en quelques minutes !",
+        "Notre réseau offre des taux compétitifs de 5,99 % à 35,99 % TAP en fonction de votre cote de crédit et de votre situation financière. Obtenez votre taux personnalisé maintenant !"
+      ],
+      "funding": [
+        "Plusieurs de nos prêteurs peuvent vous financer dans les 24 heures suivant l'approbation ! Certains offrent même un financement le jour même si vous postulez tôt dans la journée.",
+        "Rapide ! La plupart des candidats approuvés reçoivent des fonds dans un délai d'un jour ouvrable. Certains prêteurs offrent même des dépôts le jour même !",
+        "Vous pourriez être financé dès le jour ouvrable suivant l'approbation. Certains prêteurs offrent un financement le jour même pour les candidats qualifiés !"
+      ],
+      "documents": [
+        "Vous aurez généralement besoin de : une pièce d'identité valide, une preuve de revenu (talons de paie ou relevés bancaires) et vos informations bancaires. C'est aussi simple que ça !",
+        "La plupart des prêteurs exigent une pièce d'identité émise par le gouvernement, des talons de paie récents ou des relevés bancaires, et les détails de votre compte bancaire. Ayez-les prêts pour accélérer le processus !",
+        "Documents de base nécessaires : pièce d'identité avec photo, preuve de revenu (2-3 derniers talons de paie) et informations de compte bancaire. Certains prêteurs peuvent demander une vérification supplémentaire."
+      ],
+      "default": [
+        "Je suis là pour vous aider ! Vous pouvez me poser des questions sur notre processus de demande, les taux d'intérêt, les délais de financement ou les documents requis. Que souhaitez-vous savoir ?",
+        "Heureux de vous aider ! N'hésitez pas à poser des questions sur la demande de prêt, nos taux, la rapidité du financement ou les documents nécessaires.",
+        "Je peux vous aider avec des questions sur les demandes de prêt, les taux, la vitesse de financement ou les exigences. Quelle information recherchez-vous ?"
+      ]
+    }
+  },
+  "partnersMarquee": {
+    "title": "Approuvé par les principales institutions financières"
+  },
+  "ctaSection": {
+    "heading": "Prêt à obtenir votre prêt ?",
+    "description": "Rejoignez des milliers de clients satisfaits. Postulez aujourd'hui et obtenez un financement dans les 24 heures.",
+    "applyButton": "Postuler maintenant",
+    "expertButton": "Parler à un expert"
+  },
+  "howItWorks": {
+    "badge": "Processus simple",
+    "heading": "Comment ça fonctionne",
+    "description": "Quatre étapes simples de la demande au financement. Pas de frais cachés, pas de surprises.",
+    "steps": [
+      {
+        "title": "Remplir la demande",
+        "desc": "Complétez notre formulaire en ligne simple en moins de 5 minutes."
+      },
+      {
+        "title": "Examen rapide",
+        "desc": "Notre IA examine votre demande et votre profil de crédit instantanément."
+      },
+      {
+        "title": "Obtenir l'approbation",
+        "desc": "Recevez votre offre de prêt avec des conditions et des taux transparents."
+      },
+      {
+        "title": "Recevoir les fonds",
+        "desc": "L'argent est déposé directement dans votre compte bancaire."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "heading": "Foire aux questions",
+    "description": "Tout ce que vous devez savoir sur nos produits de prêt et notre processus.",
+    "categories": {
+      "gettingStarted": {
+        "name": "Pour commencer",
+        "questions": [
+          {
+            "q": "Quelles sont les conditions d'admissibilité ?",
+            "a": "Vous devez avoir au moins 18 ans, posséder une pièce d'identité gouvernementale valide et un revenu mensuel minimum de 1 500 $. Les demandeurs employés et travailleurs autonomes sont les bienvenus."
+          },
+          {
+            "q": "À quelle vitesse puis-je obtenir mon prêt ?",
+            "a": "La plupart des demandes sont examinées en 1 heure. Une fois approuvés, les fonds sont généralement versés dans les 24 heures sur votre compte bancaire."
+          },
+          {
+            "q": "De quels documents ai-je besoin ?",
+            "a": "Aucun document nécessaire ! Notre système alimenté par l'IA évalue votre demande instantanément sans nécessiter de paperasse. Il suffit de remplir le formulaire en ligne et d'être approuvé."
+          }
+        ]
+      },
+      "ratesPayments": {
+        "name": "Taux et paiements",
+        "questions": [
+          {
+            "q": "Quels taux d'intérêt offrez-vous ?",
+            "a": "Nos taux sont compétitifs et adaptés à votre profil de crédit, au montant du prêt et à la durée du terme. Nous fournissons toujours des prix transparents sans frais cachés."
+          },
+          {
+            "q": "Puis-je rembourser mon prêt plus tôt ?",
+            "a": "Absolument ! Nous encourageons le remboursement anticipé et ne facturons aucune pénalité de remboursement anticipé. Vous pouvez rembourser votre prêt à tout moment sans frais supplémentaires."
+          },
+          {
+            "q": "Quels modes de paiement sont acceptés ?",
+            "a": "Nous acceptons les virements bancaires ACH, les cartes de débit et les virements électroniques. Vous pouvez également configurer des paiements récurrents automatiques pour plus de commodité."
+          }
+        ]
+      },
+      "security": {
+        "name": "Sécurité et confidentialité",
+        "questions": [
+          {
+            "q": "Mes informations personnelles sont-elles sécurisées ?",
+            "a": "Oui. Nous utilisons un cryptage SSL 256 bits et suivons des réglementations strictes en matière de protection des données. Vos informations ne sont jamais partagées avec des tiers sans votre consentement."
+          },
+          {
+            "q": "Êtes-vous un prêteur agréé ?",
+            "a": "Oui, NeedALoanToday est entièrement agréé et réglementé dans les 50 États. Nous nous conformons à toutes les réglementations fédérales et étatiques en matière de prêt."
+          }
+        ]
+      }
+    },
+    "contactCta": {
+      "text": "Vous ne trouvez pas ce que vous cherchez ?",
+      "button": "Contactez notre équipe"
+    }
+  },
+  "loanTypes": {
+    "badge": "Produits de prêt",
+    "heading": "Trouvez le prêt qui vous convient",
+    "description": "Qu'il s'agisse d'une maison, d'une voiture ou d'une entreprise — nous avons le bon produit de prêt pour répondre à vos objectifs.",
+    "applyButton": "Postuler",
+    "types": [
+      {
+        "title": "Prêt immobilier",
+        "desc": "Financez la maison de vos rêves avec des taux compétitifs et des conditions flexibles.",
+        "range": "10 K$ - 50 K$"
+      },
+      {
+        "title": "Prêt commercial",
+        "desc": "Développez votre entreprise plus rapidement avec des solutions de capital flexibles.",
+        "range": "5 K$ - 50 K$"
+      },
+      {
+        "title": "Prêt étudiant",
+        "desc": "Investissez dans votre avenir avec un financement éducatif abordable.",
+        "range": "2 K$ - 50 K$"
+      },
+      {
+        "title": "Prêt auto",
+        "desc": "Prenez le volant plus rapidement avec un financement automobile compétitif.",
+        "range": "5 K$ - 50 K$"
+      },
+      {
+        "title": "Prêt personnel",
+        "desc": "Pour les moments importants de la vie — mariages, voyages, urgences.",
+        "range": "1 K$ - 50 K$"
+      },
+      {
+        "title": "Prêt rénovation",
+        "desc": "Transformez votre espace magnifiquement avec un financement d'amélioration résidentielle.",
+        "range": "5 K$ - 50 K$"
+      }
+    ]
+  },
+  "featuresShowcase": {
+    "badge": "Fonctionnalités intelligentes",
+    "heading": "Votre parcours financier, simplifié",
+    "description": "Gérez vos prêts et vos finances avec des outils intelligents conçus pour votre réussite.",
+    "card1": {
+      "badge": "Suivi en temps réel",
+      "title": "Surveillez vos prêts en temps réel",
+      "description": "Suivez chaque paiement, visualisez vos progrès et restez au top de vos objectifs financiers avec notre tableau de bord intuitif.",
+      "features": [
+        "Historique des paiements",
+        "Suivi des progrès",
+        "Répartition des intérêts"
+      ],
+      "button": "Voir le tableau de bord",
+      "notification": {
+        "title": "Paiement reçu",
+        "text": "Votre paiement de 450 $ a été traité avec succès"
+      }
+    },
+    "card2": {
+      "badge": "Restez informé",
+      "title": "Ne manquez jamais un paiement",
+      "description": "Recevez des notifications instantanées pour les paiements à venir, les changements de taux et les offres spéciales adaptées à votre compte.",
+      "features": [
+        "Rappels de paiement",
+        "Alertes de taux",
+        "Célébrations d'étapes",
+        "Mises à jour de sécurité"
+      ],
+      "button": "Activer les alertes",
+      "savings": {
+        "label": "Économisez jusqu'à",
+        "amount": "590 $"
+      },
+      "progress": {
+        "label": "Progrès du prêt",
+        "timeLeft": "12 mois restants"
+      }
+    }
+  },
+  "features": {
+    "badge": "Pourquoi nous choisir",
+    "heading": "Tout ce dont vous avez besoin pour un prêt rapide",
+    "description": "Nous avons rationalisé l'ensemble du processus de prêt afin que vous puissiez vous concentrer sur ce qui compte le plus.",
+    "items": [
+      {
+        "title": "Approbation instantanée",
+        "desc": "Obtenez une pré-approbation en quelques minutes grâce à notre analyse de crédit alimentée par l'IA."
+      },
+      {
+        "title": "Taux compétitifs",
+        "desc": "Profitez de taux avantageux adaptés à votre profil avec une tarification transparente."
+      },
+      {
+        "title": "Décaissement rapide",
+        "desc": "Fonds déposés sur votre compte dans les 24 heures suivant l'approbation."
+      },
+      {
+        "title": "Processus sécurisé",
+        "desc": "Le chiffrement de niveau bancaire protège vos données personnelles et financières."
+      },
+      {
+        "title": "Conditions flexibles",
+        "desc": "Choisissez des plans de remboursement qui correspondent à votre budget et à vos objectifs financiers."
+      },
+      {
+        "title": "Support 24/7",
+        "desc": "Nos spécialistes des prêts sont disponibles 24 heures sur 24 pour vous aider."
+      }
+    ]
+  },
+  "hero": {
+    "badge": "5k+ avis sur Trustpilot",
+    "heading": {
+      "part1": "Obtenez des fonds",
+      "highlight": "plus rapidement",
+      "part2": "que jamais"
+    },
+    "description": "Postulez en quelques minutes, obtenez une approbation en quelques heures. Taux compétitifs avec des conditions flexibles adaptées à vos besoins.",
+    "buttons": {
+      "getStarted": "Commencer gratuitement",
+      "seeHow": "Voir comment ça marche"
+    },
+    "socialProof": "La confiance de plus de 50 000 clients",
+    "avatarAlt": "Avatar client {index}",
+    "stats": [
+      {
+        "label": "Taux d'approbation"
+      },
+      {
+        "label": "Décaissement rapide"
+      },
+      {
+        "label": "Prêts financés"
+      },
+      {
+        "label": "Clients satisfaits"
+      }
+    ],
+    "floatingCards": {
+      "deposits": {
+        "label": "Tous les dépôts"
+      },
+      "approval": {
+        "title": "Prêt approuvé !",
+        "details": "25 000 $ • Taux bas"
+      },
+      "creditScore": {
+        "label": "Cote de crédit",
+        "rating": "Excellent ↑"
+      },
+      "card": {
+        "title": "Carte Smart Wealth",
+        "secured": "Sécurisé"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "heading": "Ce que disent nos clients",
+    "description": "Des milliers de clients satisfaits ont utilisé NeedALoanToday pour financer leurs rêves.",
+    "items": [
+      {
+        "name": "Marie Dubois",
+        "role": "Propriétaire de café",
+        "avatar": "https://randomuser.me/api/portraits/women/28.jpg",
+        "text": "J'avais besoin de fonds rapidement pour rénover mon café. NeedALoanToday m'a approuvée en moins de 3 heures. Le service était impeccable et professionnel du début à la fin.",
+        "rating": 5,
+        "amount": "28 000 $",
+        "fundedLabel": "financé"
+      },
+      {
+        "name": "Antoine Leblanc",
+        "role": "Entrepreneur technologique",
+        "avatar": "https://randomuser.me/api/portraits/men/52.jpg",
+        "text": "Leur plateforme numérique est exceptionnelle. J'ai obtenu mon prêt commercial en 24 heures, ce qui m'a permis de lancer ma startup sans retard. Merci NeedALoanToday !",
+        "rating": 5,
+        "amount": "42 000 $",
+        "fundedLabel": "financé"
+      },
+      {
+        "name": "Sophie Tremblay",
+        "role": "Designer graphique",
+        "avatar": "https://randomuser.me/api/portraits/women/55.jpg",
+        "text": "En tant que travailleuse autonome, j'étais sceptique. Mais NeedALoanToday a rendu le processus si simple et transparent. Les taux étaient justes et le remboursement flexible.",
+        "rating": 5,
+        "amount": "18 500 $",
+        "fundedLabel": "financé"
+      },
+      {
+        "name": "François Côté",
+        "role": "Propriétaire de boutique",
+        "avatar": "https://randomuser.me/api/portraits/men/33.jpg",
+        "text": "Mon prêt a été approuvé le jour même et les fonds déposés le lendemain matin. Impossible de battre cette rapidité ! Le support client était également fantastique.",
+        "rating": 5,
+        "amount": "38 000 $",
+        "fundedLabel": "financé"
+      },
+      {
+        "name": "Camille Gagnon",
+        "role": "Étudiante en médecine",
+        "avatar": "https://randomuser.me/api/portraits/women/71.jpg",
+        "text": "Leur prêt étudiant m'a sauvée. Les conditions sont très avantageuses et le processus était entièrement en ligne. Je le recommande à tous mes collègues de classe.",
+        "rating": 5,
+        "amount": "25 000 $",
+        "fundedLabel": "financé"
+      },
+      {
+        "name": "Jean-Philippe Roy",
+        "role": "Consultant en affaires",
+        "avatar": "https://randomuser.me/api/portraits/men/41.jpg",
+        "text": "Processus transparent et équipe professionnelle. J'ai obtenu exactement ce dont j'avais besoin pour développer mon cabinet de consultation. Excellent service !",
+        "rating": 5,
+        "amount": "33 000 $",
+        "fundedLabel": "financé"
+      }
+    ]
+  }
+}
