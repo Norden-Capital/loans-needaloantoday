@@ -109,7 +109,7 @@ const HeroSection = () => {
 
             <div className="flex flex-wrap gap-4 mb-14 justify-center lg:justify-start">
               <a
-                href="https://cmi.rocks/go/6a0768c8e9dee"
+                href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

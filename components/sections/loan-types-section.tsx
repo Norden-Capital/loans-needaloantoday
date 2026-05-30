@@ -151,7 +151,7 @@ const LoanTypesSection = () => {
                       {loan.range}
                     </span>
                     <a
-                      href="https://cmi.rocks/go/6a0768c8e9dee"
+                      href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
@@ -231,7 +231,7 @@ const LoanTypesSection = () => {
                       {loan.range}
                     </span>
                     <a
-                      href="https://cmi.rocks/go/6a0768c8e9dee"
+                      href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {

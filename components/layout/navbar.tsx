@@ -340,7 +340,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
 
             {/* Desktop Apply Button */}
             <a
-              href="https://cmi.rocks/go/6a0768c8e9dee"
+              href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:block"
@@ -465,7 +465,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 {/* Mobile Apply Button */}
                  <div className="pt-4">
                     <a
-                     href="https://cmi.rocks/go/6a0768c8e9dee"
+                     href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                      target="_blank"
                      rel="noopener noreferrer"
                    >

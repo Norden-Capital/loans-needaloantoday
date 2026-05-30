@@ -185,7 +185,7 @@ const FeaturesShowcase = () => {
                 {/* Push button to bottom */}
                 <div className="mt-auto">
                   <a
-                    href="https://cmi.rocks/go/6a0768c8e9dee"
+                    href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => {
@@ -281,7 +281,7 @@ const FeaturesShowcase = () => {
                 <div className="mt-auto">
                   <div className="flex items-center gap-4">
                     <a
-                      href="https://cmi.rocks/go/6a0768c8e9dee"
+                      href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
