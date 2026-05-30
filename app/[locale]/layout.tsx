@@ -82,6 +82,9 @@ export async function generateMetadata({
       creator: "@needaloantoday",
     },
     icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ],
       apple: [
         { url: "/favicon.svg" },
       ],
