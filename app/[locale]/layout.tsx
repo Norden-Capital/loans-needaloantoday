@@ -83,7 +83,7 @@ export async function generateMetadata({
     },
     icons: {
       apple: [
-        { url: "/logo.svg" },
+        { url: "/favicon.svg" },
       ],
     },
     manifest: "/site.webmanifest",
@@ -126,7 +126,23 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-
+        {/* Google Analytics - Loaded lazily to fix Lighthouse unused JS and Long Tasks penalties */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VCW7MGPC1S"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VCW7MGPC1S', {
+              anonymize_ip: true,
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false
+            });
+          `}
+        </Script>
 
         {/* Structured Data - FinancialService */}
         <Script id="schema-financial-service" type="application/ld+json">
@@ -207,7 +223,6 @@ export default async function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col font-space-grotesk" suppressHydrationWarning>
-        <GoogleAnalytics gaId="G-VCW7MGPC1S" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MainLayout>
             {children}

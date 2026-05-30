@@ -60,10 +60,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+          <div
             className="text-center lg:text-left flex flex-col items-center lg:items-start"
           >
             <motion.div
@@ -211,7 +208,7 @@ const HeroSection = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right - Floating cards composition */}
           <div className="relative hidden lg:block h-137.5">
