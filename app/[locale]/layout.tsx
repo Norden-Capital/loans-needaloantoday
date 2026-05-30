@@ -6,6 +6,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import MainLayout from "@/components/layout/main-layout";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { getAlternateMetadata } from "@/lib/seo";
 import "../globals.css";
 
@@ -81,9 +82,6 @@ export async function generateMetadata({
       creator: "@needaloantoday",
     },
     icons: {
-      icon: [
-        { url: "/favicon.svg", type: "image/svg+xml" },
-      ],
       apple: [
         { url: "/logo.svg" },
       ],
@@ -128,23 +126,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3BPHY974TD"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3BPHY974TD', {
-              anonymize_ip: true,
-              allow_google_signals: false,
-              allow_ad_personalization_signals: false
-            });
-          `}
-        </Script>
+
 
         {/* Structured Data - FinancialService */}
         <Script id="schema-financial-service" type="application/ld+json">
@@ -225,6 +207,7 @@ export default async function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col font-space-grotesk" suppressHydrationWarning>
+        <GoogleAnalytics gaId="G-VCW7MGPC1S" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MainLayout>
             {children}

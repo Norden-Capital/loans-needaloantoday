@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Bell, TrendingUp, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const FeaturesShowcase = () => {
@@ -103,10 +104,12 @@ const FeaturesShowcase = () => {
             <div className="grid md:grid-cols-2 md:h-full">
               {/* Left: Image */}
               <div className="relative h-64 md:h-full">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&h=700&fit=crop"
                   alt="Dashboard view"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-white/80 md:to-white" />
 
@@ -318,10 +321,12 @@ const FeaturesShowcase = () => {
 
               {/* Right: Image */}
               <div className="relative h-64 md:h-full order-1 md:order-2">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=700&fit=crop"
                   alt="Notifications"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent to-white/80 md:to-white" />
 
