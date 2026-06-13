@@ -4,7 +4,7 @@ import { routing } from '@/i18n/routing';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://needaloantoday.ca';
   const locales = routing.locales;
-  const pages = ['', '/about', '/contact', '/privacy', '/terms'];
+  const pages = ['', '/about', '/contact', '/privacy-policy', '/terms-of-use'];
 
   return locales.flatMap((locale) =>
     pages.map((page) => ({

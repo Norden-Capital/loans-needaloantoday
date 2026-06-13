@@ -77,7 +77,7 @@ const CookieBanner = () => {
             >
               {t("message")}{" "}
               <a
-                href="/privacy"
+                href="/privacy-policy"
                 className="hover:underline font-medium transition-colors"
                 style={{ color: "hsl(160, 84%, 39%)" }}
               >

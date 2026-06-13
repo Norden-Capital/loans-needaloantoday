@@ -81,14 +81,6 @@ export async function generateMetadata({
       images: ["/og-image.jpg"],
       creator: "@needaloantoday",
     },
-    icons: {
-      icon: [
-        { url: "/favicon.svg", type: "image/svg+xml" },
-      ],
-      apple: [
-        { url: "/favicon.svg" },
-      ],
-    },
     manifest: "/site.webmanifest",
     other: {
       "contact": "hello@needaloantoday.com",

@@ -1,11 +1,12 @@
 {
   "name": "NeedALoanToday",
-  "short_name": "Ask4Loan",
+  "short_name": "NeedALoanToday",
   "icons": [
     {
-      "src": "/logo.svg",
+      "src": "/icon.png",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#10b981",

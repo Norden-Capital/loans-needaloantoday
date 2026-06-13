@@ -28,8 +28,8 @@ const Footer = () => {
       { label: t("footer.links.support.feedback"), href: "/#testimonials" },
     ],
     Legal: [
-      { label: t("footer.links.legal.privacy"), href: "/privacy" },
-      { label: t("footer.links.legal.terms"), href: "/terms" },
+      { label: t("footer.links.legal.privacy"), href: "/privacy-policy" },
+      { label: t("footer.links.legal.terms"), href: "/terms-of-use" },
     ],
   };
 
