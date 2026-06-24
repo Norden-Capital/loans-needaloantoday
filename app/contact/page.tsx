@@ -15,61 +15,58 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+
+const contactInfo = [
+  {
+    icon: Phone,
+    title: "Call Us",
+    detail: "+1 (800) 555-LOAN",
+    sub: "Mon-Fri, 8am-8pm EST",
+  },
+  {
+    icon: Mail,
+    title: "Email Us",
+    detail: "hello@needaloantoday.com",
+    sub: "We respond within 2 hours",
+  },
+  {
+    icon: MapPin,
+    title: "Visit Us",
+    detail: "Toronto, ON",
+    sub: "Canada",
+  },
+  {
+    icon: Clock,
+    title: "Working Hours",
+    detail: "Mon-Fri: 8AM - 8PM",
+    sub: "Sat: 9AM - 5PM EST",
+  },
+];
+
+const supportTopics = [
+  {
+    icon: MessageSquare,
+    title: "General Inquiry",
+    desc: "Questions about our products, services, or company.",
+  },
+  {
+    icon: Headphones,
+    title: "Loan Support",
+    desc: "Help with an existing application or loan account.",
+  },
+  {
+    icon: Building,
+    title: "Business Partnership",
+    desc: "Interested in partnering or integrating with NeedALoanToday.",
+  },
+  {
+    icon: Send,
+    title: "Press & Media",
+    desc: "Media inquiries, press kits, and interview requests.",
+  },
+];
 
 const ContactPage = () => {
-  const t = useTranslations("contact");
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: t("info.phone.title"),
-      detail: t("info.phone.detail"),
-      sub: t("info.phone.sub"),
-    },
-    {
-      icon: Mail,
-      title: t("info.email.title"),
-      detail: t("info.email.detail"),
-      sub: t("info.email.sub"),
-    },
-    {
-      icon: MapPin,
-      title: t("info.location.title"),
-      detail: t("info.location.detail"),
-      sub: t("info.location.sub"),
-    },
-    {
-      icon: Clock,
-      title: t("info.hours.title"),
-      detail: t("info.hours.detail"),
-      sub: t("info.hours.sub"),
-    },
-  ];
-
-  const supportTopics = [
-    {
-      icon: MessageSquare,
-      title: t("support.general.title"),
-      desc: t("support.general.desc"),
-    },
-    {
-      icon: Headphones,
-      title: t("support.loan.title"),
-      desc: t("support.loan.desc"),
-    },
-    {
-      icon: Building,
-      title: t("support.partnership.title"),
-      desc: t("support.partnership.desc"),
-    },
-    {
-      icon: Send,
-      title: t("support.press.title"),
-      desc: t("support.press.desc"),
-    },
-  ];
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -133,7 +130,7 @@ const ContactPage = () => {
                   style={{ borderColor: "hsl(160, 84%, 39%)" }}
                 ></span>
                 <span className="uppercase tracking-wider font-semibold">
-                  {t("hero.badge")}
+                  Get In Touch
                 </span>
               </div>
             </div>
@@ -142,14 +139,14 @@ const ContactPage = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              {t("hero.title1")}{" "}
-              <span className="text-[hsl(160,84%,39%)]">{t("hero.title2")}</span>
+              {"We'd Love to"}{" "}
+              <span className="text-[hsl(160,84%,39%)]">Hear From You</span>
             </h1>
             <p
               className="text-white/60 text-lg max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              {t("hero.description")}
+              Whether you have a question about a loan, need technical support, or want to explore a partnership — our team is ready to help.
             </p>
           </motion.div>
         </div>
@@ -261,13 +258,13 @@ const ContactPage = () => {
                 className="text-2xl md:text-3xl font-bold text-[hsl(215,28%,12%)] mb-2"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
-                {t("form.heading")}
+                Send Us a Message
               </h2>
               <p
                 className="text-[hsl(215,14%,46%)] mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                {t("form.description")}
+                {"Fill out the form below and we'll get back to you within 2 business hours."}
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -276,10 +273,10 @@ const ContactPage = () => {
                       className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("form.fields.name.label")}
+                      Full Name
                     </label>
                     <Input
-                      placeholder={t("form.fields.name.placeholder")}
+                      placeholder="John Doe"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -293,11 +290,11 @@ const ContactPage = () => {
                       className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("form.fields.email.label")}
+                      Email Address
                     </label>
                     <Input
                       type="email"
-                      placeholder={t("form.fields.email.placeholder")}
+                      placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -313,11 +310,11 @@ const ContactPage = () => {
                       className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("form.fields.phone.label")}
+                      Phone Number
                     </label>
                     <Input
                       type="tel"
-                      placeholder={t("form.fields.phone.placeholder")}
+                      placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
@@ -331,10 +328,10 @@ const ContactPage = () => {
                       className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("form.fields.subject.label")}
+                      Subject
                     </label>
                     <Input
-                      placeholder={t("form.fields.subject.placeholder")}
+                      placeholder="Loan inquiry"
                       value={formData.subject}
                       onChange={(e) =>
                         setFormData({ ...formData, subject: e.target.value })
@@ -349,10 +346,10 @@ const ContactPage = () => {
                     className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("form.fields.message.label")}
+                    Message
                   </label>
                   <Textarea
-                    placeholder={t("form.fields.message.placeholder")}
+                    placeholder="Tell us how we can help..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -369,7 +366,7 @@ const ContactPage = () => {
                     className="gap-2 w-full sm:w-auto bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(210,25%,97%)] outline-none h-11 px-6 rounded-lg text-sm"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("form.button")} <Send size={18} />
+                    Send Message <Send size={18} />
                   </Button>
                 </div>
               </form>
@@ -386,7 +383,7 @@ const ContactPage = () => {
                 className="text-xl font-bold text-[hsl(215,28%,12%)] mb-6"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
-                {t("support.heading")}
+                How Can We Help?
               </h3>
               {supportTopics.map((topic, index) => (
                 <div
@@ -452,7 +449,7 @@ const ContactPage = () => {
                       className="text-[hsl(215,28%,12%)] font-semibold text-base"
                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
-                      {t("info.location.detail")}, {t("info.location.sub")}
+                      Toronto, ON, Canada
                     </p>
                   </div>
                 </div>
@@ -469,13 +466,13 @@ const ContactPage = () => {
             className="text-2xl font-bold text-[hsl(215,28%,12%)] mb-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            {t("faq.heading")}
+            Still Have Questions?
           </h3>
           <p
             className="text-[hsl(215,14%,46%)] mb-6 max-w-md mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {t("faq.description")}
+            Check our comprehensive FAQ section for instant answers to common questions.
           </p>
           <Button
             variant="outline"
@@ -484,7 +481,7 @@ const ContactPage = () => {
             className="border-2 border-[hsl(214,20%,90%)] text-[hsl(215,28%,12%)] hover:border-[hsl(160,84%,39%)] hover:text-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,39%)]/5 h-11 px-6 rounded-lg text-sm"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {t("faq.button")}
+            View FAQ
           </Button>
         </div>
       </section>

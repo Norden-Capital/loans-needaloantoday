@@ -3,22 +3,13 @@ import { Metadata } from "next";
 export const baseUrl = 'https://needaloantoday.ca';
 
 /**
- * Generates canonical and alternate language metadata for a given path and locale.
+ * Generates canonical metadata for a given path.
  * @param path The path of the page (e.g., '/about', '/contact', or '/' for homepage)
- * @param locale The current locale ('en' or 'fr')
- * @returns Metadata object with alternates
+ * @returns Metadata object with the canonical alternate
  */
-export function getAlternateMetadata(path: string, locale: string): Metadata["alternates"] {
-  // Normalize path: ensure it starts with / and handle homepage
-  const normalizedPath = path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
-  
+export function getAlternateMetadata(path: string): Metadata["alternates"] {
   return {
-    canonical: `/${locale}${normalizedPath}`,
-    languages: {
-      'en-CA': `/en${normalizedPath}`,
-      'fr-CA': `/fr${normalizedPath}`,
-      'x-default': `/en${normalizedPath}`, // Default to English for search engines
-    },
+    canonical: path,
   };
 }
 

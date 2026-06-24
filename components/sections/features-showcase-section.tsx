@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Bell, TrendingUp, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+
+const card1Features = ["Payment history", "Progress tracking", "Interest breakdown"];
+const card2Features = ["Payment reminders", "Rate alerts", "Milestone celebrations", "Security updates"];
 
 const FeaturesShowcase = () => {
-  const t = useTranslations("featuresShowcase");
-
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -59,7 +59,7 @@ const FeaturesShowcase = () => {
                 style={{ borderColor: "hsl(160, 84%, 39%)" }}
               ></span>
               <span className="uppercase tracking-wider font-semibold">
-                {t("badge")}
+                Smart Features
               </span>
             </div>
           </div>
@@ -68,13 +68,13 @@ const FeaturesShowcase = () => {
             className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            {t("heading")}
+            Your Financial Journey, Simplified
           </h2>
           <p
             className="text-[hsl(215,14%,46%)] mt-4 max-w-xl mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {t("description")}
+            Manage your loans and finances with intelligent tools designed for your success.
           </p>
         </div>
 
@@ -124,13 +124,13 @@ const FeaturesShowcase = () => {
                         className="text-xs font-semibold text-[hsl(215,28%,12%)] mb-1"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                       >
-                        {t("card1.notification.title")}
+                        Payment Received
                       </p>
                       <p
                         className="text-xs text-[hsl(215,14%,46%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("card1.notification.text")}
+                        Your payment of $450 was processed successfully
                       </p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ const FeaturesShowcase = () => {
                     className="text-xs text-[hsl(160,84%,39%)] font-semibold uppercase tracking-wider"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("card1.badge")}
+                    Real-time Tracking
                   </span>
                 </div>
 
@@ -155,18 +155,18 @@ const FeaturesShowcase = () => {
                   className="text-2xl font-bold text-[hsl(215,28%,12%)] mb-3"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
-                  {t("card1.title")}
+                  Monitor Your Loans in Real-Time
                 </h3>
 
                 <p
                   className="text-[hsl(215,14%,46%)] text-sm leading-relaxed mb-6"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("card1.description")}
+                  Track every payment, view your progress, and stay on top of your financial goals with our intuitive dashboard.
                 </p>
 
                 <div className="space-y-2 mb-6">
-                  {[0, 1, 2].map((index) => (
+                  {card1Features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle2
                         className="text-[hsl(160,84%,39%)]"
@@ -176,7 +176,7 @@ const FeaturesShowcase = () => {
                         className="text-sm text-[hsl(215,14%,46%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t(`card1.features.${index}`)}
+                        {feature}
                       </span>
                     </div>
                   ))}
@@ -202,7 +202,7 @@ const FeaturesShowcase = () => {
                       className="bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] w-full md:w-auto"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("card1.button")}
+                      View Dashboard
                     </Button>
                   </a>
                 </div>
@@ -242,7 +242,7 @@ const FeaturesShowcase = () => {
                     className="text-xs text-[hsl(160,84%,39%)] font-semibold uppercase tracking-wider"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("card2.badge")}
+                    Stay Informed
                   </span>
                 </div>
 
@@ -250,18 +250,18 @@ const FeaturesShowcase = () => {
                   className="text-2xl font-bold text-[hsl(215,28%,12%)] mb-3"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
-                  {t("card2.title")}
+                  Never Miss a Payment
                 </h3>
 
                 <p
                   className="text-[hsl(215,14%,46%)] text-sm leading-relaxed mb-6"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("card2.description")}
+                  Get instant notifications for upcoming payments, rate changes, and special offers tailored to your account.
                 </p>
 
                 <div className="space-y-2 mb-6">
-                  {[0, 1, 2, 3].map((index) => (
+                  {card2Features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle2
                         className="text-[hsl(160,84%,39%)]"
@@ -271,7 +271,7 @@ const FeaturesShowcase = () => {
                         className="text-sm text-[hsl(215,14%,46%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t(`card2.features.${index}`)}
+                        {feature}
                       </span>
                     </div>
                   ))}
@@ -298,7 +298,7 @@ const FeaturesShowcase = () => {
                         className="bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("card2.button")}
+                        Enable Alerts
                       </Button>
                     </a>
                     <div>
@@ -306,13 +306,13 @@ const FeaturesShowcase = () => {
                         className="text-xs text-[hsl(215,14%,46%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("card2.savings.label")}
+                        Save up to
                       </p>
                       <p
                         className="text-xl font-bold text-[hsl(160,84%,39%)]"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                       >
-                        {t("card2.savings.amount")}
+                        $590
                       </p>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ const FeaturesShowcase = () => {
                     className="text-xs text-[hsl(215,14%,46%)] mb-1"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("card2.progress.label")}
+                    Loan Progress
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="relative w-16 h-16">
@@ -373,7 +373,7 @@ const FeaturesShowcase = () => {
                         className="text-xs text-[hsl(215,14%,46%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("card2.progress.timeLeft")}
+                        12 months left
                       </p>
                     </div>
                   </div>

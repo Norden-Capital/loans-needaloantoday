@@ -4,38 +4,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { faqCategories } from "@/lib/faq-data";
 
 const FAQSection = () => {
-  const t = useTranslations("faq");
   const [openIndex, setOpenIndex] = useState<string | null>(null);
-
-  const faqCategories = [
-    {
-      category: t("categories.gettingStarted.name"),
-      faqs: [
-        { q: t("categories.gettingStarted.questions.0.q"), a: t("categories.gettingStarted.questions.0.a") },
-        { q: t("categories.gettingStarted.questions.1.q"), a: t("categories.gettingStarted.questions.1.a") },
-        { q: t("categories.gettingStarted.questions.2.q"), a: t("categories.gettingStarted.questions.2.a") },
-      ],
-    },
-    {
-      category: t("categories.ratesPayments.name"),
-      faqs: [
-        { q: t("categories.ratesPayments.questions.0.q"), a: t("categories.ratesPayments.questions.0.a") },
-        { q: t("categories.ratesPayments.questions.1.q"), a: t("categories.ratesPayments.questions.1.a") },
-        { q: t("categories.ratesPayments.questions.2.q"), a: t("categories.ratesPayments.questions.2.a") },
-      ],
-    },
-    {
-      category: t("categories.security.name"),
-      faqs: [
-        { q: t("categories.security.questions.0.q"), a: t("categories.security.questions.0.a") },
-        { q: t("categories.security.questions.1.q"), a: t("categories.security.questions.1.a") },
-      ],
-    },
-  ];
 
   return (
     <section id="faq" className="py-20 md:py-28 bg-[hsl(210,25%,97%)] relative overflow-hidden">
@@ -66,19 +39,19 @@ const FAQSection = () => {
                 className="absolute bottom-0 right-1 w-3 h-3 border-r-2 border-b-2 rounded-br-sm group-hover:right-0 transition-[right] duration-500 ease-in-out" 
                 style={{ borderColor: 'hsl(160, 84%, 39%)' }}
               ></span>
-              <span className="uppercase tracking-wider font-semibold">{t("badge")}</span>
+              <span className="uppercase tracking-wider font-semibold">FAQ</span>
             </div>
           </div>
-          
-          <h2 
+
+          <h2
             className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3 font-space-grotesk"
           >
-            {t("heading")}
+            Frequently Asked Questions
           </h2>
-          <p 
+          <p
             className="text-[hsl(215,14%,46%)] mt-4 max-w-xl mx-auto font-dm-sans"
           >
-            {t("description")}
+            Everything you need to know about our loan products and process.
           </p>
         </div>
 
@@ -145,17 +118,17 @@ const FAQSection = () => {
 
         {/* Contact CTA */}
         <div className="text-center mt-12">
-          <p 
+          <p
             className="text-[hsl(215,14%,46%)] text-sm mb-4 font-dm-sans"
           >
-            {t("contactCta.text")}
+            {"Can't find what you're looking for?"}
           </p>
           <Link href="/contact">
-            <Button 
+            <Button
               variant="outline"
               className="border-2 border-[hsl(214,20%,90%)] text-[hsl(215,28%,12%)] hover:border-[hsl(160,84%,39%)] hover:text-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,39%)]/5 font-dm-sans px-8 rounded-md"
             >
-              {t("contactCta.button")}
+              Contact Our Team
             </Button>
           </Link>
         </div>

@@ -2,10 +2,76 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const TestimonialCard = ({ t, delay }: { t: any, delay: number }) => (
+interface Testimonial {
+  name: string;
+  role: string;
+  avatar: string;
+  text: string;
+  rating: number;
+  amount: string;
+  fundedLabel: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Sarah Mitchell",
+    role: "Small Business Owner",
+    avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+    text: "I got approved in just 2 hours and the funds were in my account the next morning. The process was incredibly smooth and the customer service was exceptional.",
+    rating: 5,
+    amount: "$35,000",
+    fundedLabel: "funded",
+  },
+  {
+    name: "James Rodriguez",
+    role: "Freelance Developer",
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    text: "As a freelancer, getting a loan was always difficult. NeedALoanToday's AI evaluation looked beyond traditional metrics and approved me quickly. Highly recommend!",
+    rating: 5,
+    amount: "$15,000",
+    fundedLabel: "funded",
+  },
+  {
+    name: "Emily Chen",
+    role: "Real Estate Agent",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+    text: "Everything was handled digitally and efficiently. Within hours I had an offer and the funds arrived faster than I expected. The best lending experience I've had.",
+    rating: 5,
+    amount: "$50,000",
+    fundedLabel: "funded",
+  },
+  {
+    name: "Michael Torres",
+    role: "Restaurant Owner",
+    avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+    text: "Needed quick capital to expand my restaurant. NeedALoanToday came through when traditional banks took weeks just to review my application. Funded in 18 hours!",
+    rating: 5,
+    amount: "$45,000",
+    fundedLabel: "funded",
+  },
+  {
+    name: "Aisha Patel",
+    role: "Graduate Student",
+    avatar: "https://randomuser.me/api/portraits/women/47.jpg",
+    text: "Their education loan saved my semester. No hidden fees, and the repayment plan is incredibly flexible. I recommend NeedALoanToday to all my classmates.",
+    rating: 5,
+    amount: "$22,000",
+    fundedLabel: "funded",
+  },
+  {
+    name: "David Park",
+    role: "Marketing Consultant",
+    avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+    text: "The entire process was seamless and transparent. NeedALoanToday's advisors guided me every step and I got the funds I needed to grow my consulting business.",
+    rating: 5,
+    amount: "$30,000",
+    fundedLabel: "funded",
+  },
+];
+
+const TestimonialCard = ({ t, delay }: { t: Testimonial, delay: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -72,9 +138,6 @@ const TestimonialCard = ({ t, delay }: { t: any, delay: number }) => (
 );
 
 const TestimonialsSection = () => {
-  const t = useTranslations("testimonials");
-  const testimonials = t.raw("items");
-
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
       {/* Subtle diagonal pattern */}
@@ -110,32 +173,32 @@ const TestimonialsSection = () => {
                 className="absolute bottom-0 right-1 w-3 h-3 border-r-2 border-b-2 rounded-br-sm group-hover:right-0 transition-[right] duration-500 ease-in-out" 
                 style={{ borderColor: 'hsl(160, 84%, 39%)' }}
               ></span>
-              <span className="uppercase tracking-wider font-semibold">{t("badge")}</span>
+              <span className="uppercase tracking-wider font-semibold">Testimonials</span>
             </div>
           </div>
-          
-          <h2 
+
+          <h2
             className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3 font-space-grotesk"
           >
-            {t("heading")}
+            What Our Customers Say
           </h2>
-          <p 
+          <p
             className="text-[hsl(215,14%,46%)] mt-4 max-w-xl mx-auto font-dm-sans"
           >
-            {t("description")}
+            Thousands of happy customers have used NeedALoanToday to fund their dreams.
           </p>
         </div>
 
         {/* First row: 3 cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-6">
-          {testimonials.slice(0, 3).map((testimonial: any, i: number) => (
+          {testimonials.slice(0, 3).map((testimonial, i) => (
             <TestimonialCard key={i} t={testimonial} delay={i * 0.1} />
           ))}
         </div>
 
         {/* Second row: 3 cards */}
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.slice(3).map((testimonial: any, i: number) => (
+          {testimonials.slice(3).map((testimonial, i) => (
             <TestimonialCard key={i} t={testimonial} delay={i * 0.1} />
           ))}
         </div>

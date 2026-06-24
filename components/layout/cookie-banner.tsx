@@ -1,10 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
 
 const CookieBanner = () => {
-  const t = useTranslations("cookieBanner");
   const [isVisible, setIsVisible] = useState(false);
 
   // Check if user has already made a choice
@@ -75,13 +73,13 @@ const CookieBanner = () => {
               className="text-xs sm:text-sm leading-relaxed"
               style={{ color: "hsl(215, 14%, 46%)" }}
             >
-              {t("message")}{" "}
+              We use cookies to enhance your experience, analyze site traffic, and personalize content.{" "}
               <a
                 href="/privacy-policy"
                 className="hover:underline font-medium transition-colors"
                 style={{ color: "hsl(160, 84%, 39%)" }}
               >
-                {t("learnMore")}
+                Learn more
               </a>
             </p>
           </div>
@@ -98,7 +96,7 @@ const CookieBanner = () => {
                 fontFamily: "var(--font-dm-sans), sans-serif",
               }}
             >
-              {t("decline")}
+              Decline
             </button>
             <button
               onClick={handleAcceptAll}
@@ -110,7 +108,7 @@ const CookieBanner = () => {
                 fontFamily: "var(--font-dm-sans), sans-serif",
               }}
             >
-              {t("acceptAll")}
+              Accept All
             </button>
           </div>
         </div>

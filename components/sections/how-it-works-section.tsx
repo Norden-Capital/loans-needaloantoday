@@ -2,18 +2,15 @@
 
 import { motion } from "framer-motion";
 import { FileText, Search, CheckCircle, Banknote, ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+
+const steps = [
+  { icon: FileText, title: "Fill Application", desc: "Complete our simple online form in under 5 minutes." },
+  { icon: Search, title: "Quick Review", desc: "Our AI reviews your application and credit profile instantly." },
+  { icon: CheckCircle, title: "Get Approved", desc: "Receive your loan offer with transparent terms and rates." },
+  { icon: Banknote, title: "Receive Funds", desc: "Money is deposited directly into your bank account." },
+];
 
 const HowItWorksSection = () => {
-  const t = useTranslations("howItWorks");
-
-  const steps = [
-    { icon: FileText, title: t("steps.0.title"), desc: t("steps.0.desc") },
-    { icon: Search, title: t("steps.1.title"), desc: t("steps.1.desc") },
-    { icon: CheckCircle, title: t("steps.2.title"), desc: t("steps.2.desc") },
-    { icon: Banknote, title: t("steps.3.title"), desc: t("steps.3.desc") },
-  ];
-
   return (
     <section id="how-it-works" className="py-20 md:py-28 bg-white relative overflow-hidden">
       {/* Diagonal lines pattern */}
@@ -49,19 +46,19 @@ const HowItWorksSection = () => {
                 className="absolute bottom-0 right-1 w-3 h-3 border-r-2 border-b-2 rounded-br-sm group-hover:right-0 transition-[right] duration-500 ease-in-out" 
                 style={{ borderColor: 'hsl(160, 84%, 39%)' }}
               ></span>
-              <span className="uppercase tracking-wider font-semibold">{t("badge")}</span>
+              <span className="uppercase tracking-wider font-semibold">Simple Process</span>
             </div>
           </div>
-          
-          <h2 
+
+          <h2
             className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3 font-space-grotesk"
           >
-            {t("heading")}
+            How It Works
           </h2>
-          <p 
+          <p
             className="text-[hsl(215,14%,46%)] mt-4 max-w-xl mx-auto font-dm-sans"
           >
-            {t("description")}
+            Four simple steps from application to funding. No hidden fees, no surprises.
           </p>
         </div>
 

@@ -13,7 +13,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
 import CTASection from "@/components/sections/cta-section";
 import Image from "next/image";
 
@@ -26,65 +25,63 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+const values = [
+  {
+    icon: Shield,
+    title: "Transparency",
+    desc: "No hidden fees, no surprises. Every rate, term, and condition is clearly communicated upfront.",
+  },
+  {
+    icon: Target,
+    title: "Accessibility",
+    desc: "We believe everyone deserves access to fair financing, regardless of their background.",
+  },
+  {
+    icon: Eye,
+    title: "Innovation",
+    desc: "We leverage cutting-edge AI and technology to make lending faster and smarter.",
+  },
+  {
+    icon: Users,
+    title: "Community",
+    desc: "We invest in financial literacy programs and support local communities across the nation.",
+  },
+];
+
+const timeline = [
+  {
+    year: "2016",
+    title: "Founded",
+    desc: "Started with a mission to simplify personal lending.",
+  },
+  {
+    year: "2018",
+    title: "Expansion",
+    desc: "Expanded to all 50 states.",
+  },
+  {
+    year: "2020",
+    title: "AI Launch",
+    desc: "Introduced AI-powered instant credit analysis.",
+  },
+  {
+    year: "2022",
+    title: "50K Users",
+    desc: "Reached fifty thousand registered borrowers.",
+  },
+  {
+    year: "2024",
+    title: "$500K Funded",
+    desc: "Disbursed over half a million in total loans.",
+  },
+  {
+    year: "2026",
+    title: "Growth",
+    desc: "Continuing to expand our services.",
+  },
+];
+
 const AboutPage = () => {
-  const t = useTranslations("about");
-
-  const values = [
-    {
-      icon: Shield,
-      title: t("values.transparency.title"),
-      desc: t("values.transparency.desc"),
-    },
-    {
-      icon: Target,
-      title: t("values.accessibility.title"),
-      desc: t("values.accessibility.desc"),
-    },
-    {
-      icon: Eye,
-      title: t("values.innovation.title"),
-      desc: t("values.innovation.desc"),
-    },
-    {
-      icon: Users,
-      title: t("values.community.title"),
-      desc: t("values.community.desc"),
-    },
-  ];
-
-  const timeline = [
-    {
-      year: "2016",
-      title: t("timeline.2016.title"),
-      desc: t("timeline.2016.desc"),
-    },
-    {
-      year: "2018",
-      title: t("timeline.2018.title"),
-      desc: t("timeline.2018.desc"),
-    },
-    {
-      year: "2020",
-      title: t("timeline.2020.title"),
-      desc: t("timeline.2020.desc"),
-    },
-    {
-      year: "2022",
-      title: t("timeline.2022.title"),
-      desc: t("timeline.2022.desc"),
-    },
-    {
-      year: "2024",
-      title: t("timeline.2024.title"),
-      desc: t("timeline.2024.desc"),
-    },
-    {
-      year: "2026",
-      title: t("timeline.2026.title"),
-      desc: t("timeline.2026.desc"),
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -132,7 +129,7 @@ const AboutPage = () => {
                     style={{ borderColor: "hsl(160, 84%, 39%)" }}
                   ></span>
                   <span className="uppercase tracking-wider font-semibold">
-                    {t("hero.badge")}
+                    About NeedALoanToday
                   </span>
                 </div>
               </div>
@@ -140,23 +137,23 @@ const AboutPage = () => {
               <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 leading-tight font-space-grotesk"
               >
-                {t("hero.title1")}
+                Redefining How
                 <br />
                 <span className="text-[hsl(160,84%,39%)]">
-                  {t("hero.title2")}
+                  Lending Works
                 </span>
               </h1>
               <p
                 className="text-white/60 text-lg leading-relaxed mb-8 max-w-lg font-dm-sans"
               >
-                {t("hero.description")}
+                Founded in 2016, NeedALoanToday has grown from a small fintech startup to a trusted digital lender — serving over 50,000 borrowers and disbursing more than $500,000 in loans.
               </p>
               <div className="flex flex-wrap gap-8">
                 {[
-                  { value: "$500K+", label: t("hero.stats.totalFunded") },
-                  { value: "50K+", label: t("hero.stats.borrowers") },
-                  { value: "50", label: t("hero.stats.states") },
-                  { value: "4.9★", label: t("hero.stats.rating") },
+                  { value: "$500K+", label: "Total Funded" },
+                  { value: "50K+", label: "Borrowers" },
+                  { value: "50", label: "States" },
+                  { value: "4.9★", label: "Rating" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div
@@ -199,12 +196,12 @@ const AboutPage = () => {
                       <p
                         className="text-white font-semibold text-sm font-space-grotesk"
                       >
-                        {t("hero.floatingCard.title")}
+                        Trusted by Thousands
                       </p>
                       <p
                         className="text-white/50 text-xs font-dm-sans"
                       >
-                        {t("hero.floatingCard.subtitle")}
+                        Fast, secure, and transparent lending
                       </p>
                     </div>
                   </div>
@@ -238,12 +235,12 @@ const AboutPage = () => {
               <h3
                 className="text-2xl font-bold text-[hsl(215,28%,12%)] mb-4 font-space-grotesk"
               >
-                {t("mission.title")}
+                Our Mission
               </h3>
               <p
                 className="text-[hsl(215,14%,46%)] leading-relaxed font-dm-sans"
               >
-                {t("mission.description")}
+                {"To democratize access to financial services by making lending faster, fairer, and more transparent. We believe that a loan application shouldn't take weeks — it should take minutes."}
               </p>
             </motion.div>
             <motion.div
@@ -261,12 +258,12 @@ const AboutPage = () => {
               <h3
                 className="text-2xl font-bold text-[hsl(215,28%,12%)] mb-4 font-space-grotesk"
               >
-                {t("vision.title")}
+                Our Vision
               </h3>
               <p
                 className="text-[hsl(215,14%,46%)] leading-relaxed font-dm-sans"
               >
-                {t("vision.description")}
+                A world where everyone has access to fair, affordable credit. We envision a future where AI-driven lending empowers individuals and businesses to achieve their financial goals without barriers.
               </p>
             </motion.div>
           </div>
@@ -314,7 +311,7 @@ const AboutPage = () => {
                   style={{ borderColor: "hsl(160, 84%, 39%)" }}
                 ></span>
                 <span className="uppercase tracking-wider font-semibold">
-                  {t("values.badge")}
+                  Our Values
                 </span>
               </div>
             </div>
@@ -322,7 +319,7 @@ const AboutPage = () => {
             <h2
               className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3 font-space-grotesk"
             >
-              {t("values.heading")}
+              What Drives Us Forward
             </h2>
           </div>
           <motion.div
@@ -380,7 +377,7 @@ const AboutPage = () => {
                   style={{ borderColor: "hsl(160, 84%, 39%)" }}
                 ></span>
                 <span className="uppercase tracking-wider font-semibold">
-                  {t("timeline.badge")}
+                  Our Journey
                 </span>
               </div>
             </div>
@@ -388,7 +385,7 @@ const AboutPage = () => {
             <h2
               className="text-3xl md:text-4xl font-bold text-white mt-3 font-space-grotesk"
             >
-              {t("timeline.heading")}
+              A Decade of Impact
             </h2>
           </div>
           <div className="relative">

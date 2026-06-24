@@ -1,13 +1,9 @@
 "use client";
 
-import { useEffect } from 'react';
 import { Marquee } from "@/components/ui/marquee";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export const PartnersMarquee = () => {
-  const t = useTranslations("partnersMarquee");
-
   // Real bank logos with theme styling
   const partnerLogos = [
     { name: "BMO Bank", src: "/partners/BMO.svg" },
@@ -30,7 +26,7 @@ export const PartnersMarquee = () => {
         className="text-sm text-[hsl(160,84%,39%)] uppercase tracking-wider mb-8 font-semibold"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
-        {t("title")}
+        Trusted by Leading Financial Institutions
       </p>
 
       {/* Reduced width to show ~3 logos at a time */}

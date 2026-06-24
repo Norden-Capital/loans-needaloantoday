@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Home, Briefcase, GraduationCap, Car, Heart, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
 
 const GridPattern = () => (
   <svg className="absolute inset-0 w-full h-full opacity-[0.04] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
@@ -16,48 +15,46 @@ const GridPattern = () => (
   </svg>
 );
 
+const loanTypes = [
+  {
+    icon: Home,
+    title: "Home Loan",
+    desc: "Finance your dream home with competitive rates and flexible terms.",
+    range: "$10K - $50K",
+  },
+  {
+    icon: Briefcase,
+    title: "Business Loan",
+    desc: "Grow your business faster with flexible capital solutions.",
+    range: "$5K - $50K",
+  },
+  {
+    icon: GraduationCap,
+    title: "Education Loan",
+    desc: "Invest in your future with affordable education financing.",
+    range: "$2K - $50K",
+  },
+  {
+    icon: Car,
+    title: "Auto Loan",
+    desc: "Get behind the wheel faster with competitive auto financing.",
+    range: "$5K - $50K",
+  },
+  {
+    icon: Heart,
+    title: "Personal Loan",
+    desc: "For life's important moments — weddings, travel, emergencies.",
+    range: "$1K - $50K",
+  },
+  {
+    icon: Wrench,
+    title: "Renovation Loan",
+    desc: "Transform your space beautifully with home improvement funding.",
+    range: "$5K - $50K",
+  },
+];
+
 const LoanTypesSection = () => {
-  const t = useTranslations("loanTypes");
-
-  const loanTypes = [
-    {
-      icon: Home,
-      title: t("types.0.title"),
-      desc: t("types.0.desc"),
-      range: t("types.0.range"),
-    },
-    {
-      icon: Briefcase,
-      title: t("types.1.title"),
-      desc: t("types.1.desc"),
-      range: t("types.1.range"),
-    },
-    {
-      icon: GraduationCap,
-      title: t("types.2.title"),
-      desc: t("types.2.desc"),
-      range: t("types.2.range"),
-    },
-    {
-      icon: Car,
-      title: t("types.3.title"),
-      desc: t("types.3.desc"),
-      range: t("types.3.range"),
-    },
-    {
-      icon: Heart,
-      title: t("types.4.title"),
-      desc: t("types.4.desc"),
-      range: t("types.4.range"),
-    },
-    {
-      icon: Wrench,
-      title: t("types.5.title"),
-      desc: t("types.5.desc"),
-      range: t("types.5.range"),
-    },
-  ];
-
   return (
     <section id="about" className="py-20 md:py-28 bg-[hsl(215,28%,12%)] relative overflow-hidden">
       <GridPattern />
@@ -81,7 +78,7 @@ const LoanTypesSection = () => {
                 className="absolute bottom-0 right-1 w-3 h-3 border-r-2 border-b-2 rounded-br-sm group-hover:right-0 transition-[right] duration-500 ease-in-out"
                 style={{ borderColor: 'hsl(160, 84%, 39%)' }}
               ></span>
-              <span className="uppercase tracking-wider font-semibold">{t("badge")}</span>
+              <span className="uppercase tracking-wider font-semibold">Loan Products</span>
             </div>
           </div>
 
@@ -89,13 +86,13 @@ const LoanTypesSection = () => {
             className="text-3xl md:text-4xl font-bold text-white mt-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            {t("heading")}
+            Find the Right Loan for You
           </h2>
           <p
             className="text-white/50 mt-4 max-w-xl mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {t("description")}
+            {"Whether it's a home, car, or business — we've got the right loan product to match your goals."}
           </p>
         </div>
 
@@ -169,7 +166,7 @@ const LoanTypesSection = () => {
                         className="text-[hsl(160,84%,39%)] p-0 h-auto text-sm hover:text-[hsl(160,84%,35%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("applyButton")} →
+                        Apply →
                       </Button>
                     </a>
                   </div>
@@ -249,7 +246,7 @@ const LoanTypesSection = () => {
                         className="text-[hsl(160,84%,39%)] p-0 h-auto text-sm hover:text-[hsl(160,84%,35%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("applyButton")} →
+                        Apply →
                       </Button>
                     </a>
                   </div>

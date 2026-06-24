@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Zap, Shield, Clock, Percent, CreditCard, Headphones } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 const container = {
   hidden: {},
@@ -25,18 +24,16 @@ const DotPattern = () => (
   </svg>
 );
 
+const features = [
+  { icon: Zap, title: "Instant Approval", desc: "Get pre-approved in minutes with our AI-powered credit analysis." },
+  { icon: Percent, title: "Competitive Rates", desc: "Enjoy favorable rates tailored to your profile with transparent pricing." },
+  { icon: Clock, title: "Fast Disbursement", desc: "Funds deposited into your account within 24 hours of approval." },
+  { icon: Shield, title: "Secure Process", desc: "Bank-grade encryption protects your personal and financial data." },
+  { icon: CreditCard, title: "Flexible Terms", desc: "Choose repayment plans that fit your budget and financial goals." },
+  { icon: Headphones, title: "24/7 Support", desc: "Our loan specialists are available around the clock to assist you." },
+];
+
 const FeaturesSection = () => {
-  const t = useTranslations("features");
-
-  const features = [
-    { icon: Zap, title: t("items.0.title"), desc: t("items.0.desc") },
-    { icon: Percent, title: t("items.1.title"), desc: t("items.1.desc") },
-    { icon: Clock, title: t("items.2.title"), desc: t("items.2.desc") },
-    { icon: Shield, title: t("items.3.title"), desc: t("items.3.desc") },
-    { icon: CreditCard, title: t("items.4.title"), desc: t("items.4.desc") },
-    { icon: Headphones, title: t("items.5.title"), desc: t("items.5.desc") },
-  ];
-
   return (
     <section id="services" className="py-20 md:py-28 bg-[hsl(210,25%,97%)] relative overflow-hidden">
       <DotPattern />
@@ -62,21 +59,21 @@ const FeaturesSection = () => {
                 className="absolute bottom-0 right-1 w-3 h-3 border-r-2 border-b-2 rounded-br-sm group-hover:right-0 transition-[right] duration-500 ease-in-out" 
                 style={{ borderColor: 'hsl(160, 84%, 39%)' }}
               ></span>
-              <span className="uppercase tracking-wider font-semibold">{t("badge")}</span>
+              <span className="uppercase tracking-wider font-semibold">Why Choose Us</span>
             </div>
           </div>
-          
-          <h2 
+
+          <h2
             className="text-3xl md:text-4xl font-bold text-[hsl(215,28%,12%)] mt-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            {t("heading")}
+            Everything You Need for a Fast Loan
           </h2>
-          <p 
+          <p
             className="text-[hsl(215,14%,46%)] mt-4 max-w-xl mx-auto"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {t("description")}
+            {"We've streamlined the entire lending process so you can focus on what matters most."}
           </p>
         </div>
 

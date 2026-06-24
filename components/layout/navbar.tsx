@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Link, useRouter, usePathname } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
-import { 
-  Menu, X, ChevronDown, ChevronRight, DollarSign, Target, 
-  CreditCard, FileText, MapPin, List, Calculator, Scale, 
-  BookOpen, HelpCircle, Grid3x3 
+import { useState, useRef } from "react";
+import Link from "next/link";
+import {
+  Menu, X, ChevronDown, ChevronRight, DollarSign, Target,
+  CreditCard, FileText, MapPin, List, Calculator, Scale,
+  BookOpen, HelpCircle, Grid3x3
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -16,21 +15,83 @@ interface NavbarProps {
   isBannerVisible: boolean;
 }
 
-const Navbar = ({ isBannerVisible }: NavbarProps) => {
-  const t = useTranslations();
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+const loansDropdownItems = [
+  {
+    icon: DollarSign,
+    title: "By Amount",
+    description: "$300 - $5,000 loans",
+    to: "/loans/by-amount",
+  },
+  {
+    icon: Target,
+    title: "By Purpose",
+    description: "Debt consolidation, emergencies & more",
+    to: "/loans/by-purpose",
+  },
+  {
+    icon: CreditCard,
+    title: "By Credit Score",
+    description: "Find loans for your credit range",
+    to: "/loans/by-credit-score",
+  },
+  {
+    icon: FileText,
+    title: "By Type",
+    description: "Personal, emergency, same-day loans",
+    to: "/loans/by-type",
+  },
+  {
+    icon: MapPin,
+    title: "By Location",
+    description: "Loans in Canada",
+    to: "/loans/by-location",
+  },
+  {
+    icon: List,
+    title: "All Loan Options",
+    description: "Browse all available loans",
+    to: "/loans",
+  },
+];
 
+const resourcesDropdownItems = [
+  {
+    icon: Calculator,
+    title: "Tools",
+    description: "Calculators & helpful tools",
+    to: "/resources/tools",
+  },
+  {
+    icon: Scale,
+    title: "Comparisons",
+    description: "Compare borrowing options",
+    to: "/resources/comparisons",
+  },
+  {
+    icon: BookOpen,
+    title: "Guides",
+    description: "Step-by-step loan guides",
+    to: "/resources/guides",
+  },
+  {
+    icon: HelpCircle,
+    title: "FAQ",
+    description: "Common questions answered",
+    to: "/resources/faq",
+  },
+  {
+    icon: Grid3x3,
+    title: "All Resources",
+    description: "Browse all tools & guides",
+    to: "/resources",
+  },
+];
+
+const Navbar = ({ isBannerVisible }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileAccordions, setMobileAccordions] = useState<Record<string, boolean>>({});
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const toggleLanguage = () => {
-    const newLang = locale === "fr" ? "en" : "fr";
-    router.replace(pathname, { locale: newLang });
-  };
 
   const handleDropdownEnter = (dropdown: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -53,78 +114,6 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
       return newState;
     });
   };
-
-  const loansDropdownItems = [
-    {
-      icon: DollarSign,
-      title: t("navbar.loans.byAmount.title"),
-      description: t("navbar.loans.byAmount.description"),
-      to: "/loans/by-amount",
-    },
-    {
-      icon: Target,
-      title: t("navbar.loans.byPurpose.title"),
-      description: t("navbar.loans.byPurpose.description"),
-      to: "/loans/by-purpose",
-    },
-    {
-      icon: CreditCard,
-      title: t("navbar.loans.byCredit.title"),
-      description: t("navbar.loans.byCredit.description"),
-      to: "/loans/by-credit-score",
-    },
-    {
-      icon: FileText,
-      title: t("navbar.loans.byType.title"),
-      description: t("navbar.loans.byType.description"),
-      to: "/loans/by-type",
-    },
-    {
-      icon: MapPin,
-      title: t("navbar.loans.byLocation.title"),
-      description: t("navbar.loans.byLocation.description"),
-      to: "/loans/by-location",
-    },
-    {
-      icon: List,
-      title: t("navbar.loans.allOptions.title"),
-      description: t("navbar.loans.allOptions.description"),
-      to: "/loans",
-    },
-  ];
-
-  const resourcesDropdownItems = [
-    {
-      icon: Calculator,
-      title: t("navbar.resources.tools.title"),
-      description: t("navbar.resources.tools.description"),
-      to: "/resources/tools",
-    },
-    {
-      icon: Scale,
-      title: t("navbar.resources.comparisons.title"),
-      description: t("navbar.resources.comparisons.description"),
-      to: "/resources/comparisons",
-    },
-    {
-      icon: BookOpen,
-      title: t("navbar.resources.guides.title"),
-      description: t("navbar.resources.guides.description"),
-      to: "/resources/guides",
-    },
-    {
-      icon: HelpCircle,
-      title: t("navbar.resources.faq.title"),
-      description: t("navbar.resources.faq.description"),
-      to: "/resources/faq",
-    },
-    {
-      icon: Grid3x3,
-      title: t("navbar.resources.allResources.title"),
-      description: t("navbar.resources.allResources.description"),
-      to: "/resources",
-    },
-  ];
 
   return (
     <nav className="sticky top-0 z-40 bg-[hsl(215,28%,12%)] backdrop-blur-md border-b border-white/10">
@@ -157,14 +146,14 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 <button
                   aria-expanded={activeDropdown === "loans"}
                   aria-haspopup="true"
-                  aria-label={t("navbar.aria.loansDropdown")}
+                  aria-label="Toggle Loans menu"
                   className="flex items-center gap-1 text-sm font-medium transition-colors py-2 outline-none hover:text-[hsl(160,84%,39%)]"
                   style={{
                     color: activeDropdown === "loans" ? "#FFFFFF" : "rgba(255, 255, 255, 0.7)",
                     fontFamily: "var(--font-dm-sans), sans-serif",
                   }}
                 >
-                  {t("navbar.links.loans")} <ChevronDown className="w-4 h-4" />
+                  Loans <ChevronDown className="w-4 h-4" />
                 </button>
 
                 <div
@@ -184,7 +173,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                       return (
                         <Link
                           key={index}
-                          href={item.to as any}
+                          href={item.to}
                           className="dropdown-link flex items-start gap-3 p-3 rounded-md transition-all duration-200 hover:bg-[hsl(210,25%,97%)]"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -233,14 +222,14 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 <button
                   aria-expanded={activeDropdown === "resources"}
                   aria-haspopup="true"
-                  aria-label={t("navbar.aria.resourcesDropdown")}
+                  aria-label="Toggle Resources menu"
                   className="flex items-center gap-1 text-sm font-medium transition-colors py-2 outline-none hover:text-[hsl(160,84%,39%)]"
                   style={{
                     color: activeDropdown === "resources" ? "#FFFFFF" : "rgba(255, 255, 255, 0.7)",
                     fontFamily: "var(--font-dm-sans), sans-serif",
                   }}
                 >
-                  {t("navbar.links.resources")} <ChevronDown className="w-4 h-4" />
+                  Resources <ChevronDown className="w-4 h-4" />
                 </button>
 
                 <div
@@ -260,7 +249,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                       return (
                         <Link
                           key={index}
-                          href={item.to as any}
+                          href={item.to}
                           className="dropdown-link flex items-start gap-3 p-3 rounded-md transition-all duration-200 hover:bg-[hsl(210,25%,97%)]"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -308,7 +297,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                   fontFamily: "var(--font-dm-sans), sans-serif",
                 }}
               >
-                {t("navbar.links.about")}
+                About Us
               </Link>
 
               {/* Contact Link */}
@@ -319,25 +308,13 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                   fontFamily: "var(--font-dm-sans), sans-serif",
                 }}
               >
-                {t("navbar.links.contact")}
+                Contact
               </Link>
             </div>
           </div>
 
-          {/* Right Side - Language Toggle & CTA */}
+          {/* Right Side - CTA */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              aria-label={t("navbar.aria.languageToggle")}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border transition-all font-medium bg-white/5 border-white/20 text-white/70 hover:border-[hsl(160,84%,39%)] hover:text-[hsl(160,84%,39%)]"
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-              }}
-            >
-              <span className="text-sm uppercase font-bold">{locale === "en" ? "EN" : "FR"}</span>
-            </button>
-
             {/* Desktop Apply Button */}
             <a
               href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday"
@@ -351,7 +328,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 className="bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] outline-none rounded-md px-4 py-1.5 h-auto text-xs"
                 style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
               >
-                {t("navbar.applyNow")}
+                Apply Now
               </Button>
             </a>
 
@@ -386,7 +363,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                     aria-expanded={mobileAccordions.loans}
                     className="w-full flex items-center justify-between px-2 py-2 text-sm font-semibold rounded-md transition-colors text-white font-dm-sans"
                   >
-                    <span>{t("navbar.links.loans")}</span>
+                    <span>Loans</span>
                     <ChevronRight
                       className={`w-4 h-4 transition-transform duration-300 ${mobileAccordions.loans ? "rotate-90" : ""}`}
                     />
@@ -399,7 +376,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                       {loansDropdownItems.map((item, index) => (
                         <Link
                           key={index}
-                          href={item.to as any}
+                          href={item.to}
                           className="flex items-center gap-3 px-2 py-2 rounded-md transition-all duration-200 text-white/70 hover:text-primary font-dm-sans"
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -420,7 +397,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                     aria-expanded={mobileAccordions.resources}
                     className="w-full flex items-center justify-between px-2 py-2 text-sm font-semibold rounded-md transition-colors text-white font-dm-sans"
                   >
-                    <span>{t("navbar.links.resources")}</span>
+                    <span>Resources</span>
                     <ChevronRight
                       className={`w-4 h-4 transition-transform duration-300 ${mobileAccordions.resources ? "rotate-90" : ""}`}
                     />
@@ -433,7 +410,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                       {resourcesDropdownItems.map((item, index) => (
                         <Link
                           key={index}
-                          href={item.to as any}
+                          href={item.to}
                           className="flex items-center gap-3 px-2 py-2 rounded-md transition-all duration-200 text-white/70 hover:text-primary font-dm-sans"
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -448,14 +425,17 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 </div>
 
                 {/* Mobile Static Links */}
-                {["about", "contact"].map((link) => (
-                  <div key={link} className="py-2 border-t border-white/5">
+                {[
+                  { label: "About Us", href: "/about" },
+                  { label: "Contact", href: "/contact" },
+                ].map((link) => (
+                  <div key={link.href} className="py-2 border-t border-white/5">
                     <Link
-                      href={`/${link}` as any}
+                      href={link.href}
                       className="block px-2 py-2 text-sm font-semibold rounded-md transition-colors text-white font-dm-sans"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {t(`navbar.links.${link}`)}
+                      {link.label}
                     </Link>
                   </div>
                 ))}
@@ -472,7 +452,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                      <Button
                        className="w-full bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] outline-none rounded-md py-4 font-bold font-dm-sans text-sm"
                      >
-                       {t("navbar.applyNow")}
+                       Apply Now
                      </Button>
                    </a>
                  </div>

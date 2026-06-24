@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Star, TrendingUp, Shield, CreditCard } from "lucide-react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const FloatingCard = ({ children, className, delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) => (
@@ -22,16 +21,14 @@ const FloatingCard = ({ children, className, delay = 0 }: { children: React.Reac
   </motion.div>
 );
 
+const stats = [
+  { value: "98%", label: "Approval Rate" },
+  { value: "24h", label: "Fast Disbursement" },
+  { value: "$500K", label: "Loans Funded" },
+  { value: "50K+", label: "Happy Customers" },
+];
+
 const HeroSection = () => {
-  const t = useTranslations("hero");
-
-  const stats = [
-    { value: "98%", label: t("stats.0.label") },
-    { value: "24h", label: t("stats.1.label") },
-    { value: "$500K", label: t("stats.2.label") },
-    { value: "50K+", label: t("stats.3.label") },
-  ];
-
   return (
     <section className="relative bg-[hsl(215,28%,12%)] overflow-hidden pt-10 pb-8 md:pt-10 md:pb-16 min-h-[80vh] flex items-center rounded-b-none md:rounded-b-none">
       {/* Background effects */}
@@ -74,7 +71,7 @@ const HeroSection = () => {
                 className="text-sm text-[hsl(160,84%,39%)] font-medium"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                {t("badge")}
+                5k+ reviews on Trustpilot
               </span>
               <div className="flex -space-x-0.75">
                 {[...Array(5)].map((_, i) => (
@@ -87,9 +84,9 @@ const HeroSection = () => {
               className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-white leading-[1.1] mb-6"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              {t("heading.part1")}{" "}
+              Get Funds{" "}
               <span className="relative inline-block">
-                <span className="text-[hsl(160,84%,39%)]">{t("heading.highlight")}</span>
+                <span className="text-[hsl(160,84%,39%)]">Faster</span>
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
@@ -97,14 +94,14 @@ const HeroSection = () => {
                   className="absolute -bottom-1 left-0 right-0 h-1 bg-[hsl(160,84%,39%)]/30 rounded-full origin-left"
                 />
               </span>{" "}
-              {t("heading.part2")}
+              Than Ever Before
             </h1>
 
             <p
               className="text-white/55 text-lg md:text-xl mb-10 max-w-lg leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              {t("description")}
+              Apply in minutes, get approved in hours. Competitive rates with flexible terms tailored to your needs.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-14 justify-center lg:justify-start">
@@ -127,7 +124,7 @@ const HeroSection = () => {
                   className="gap-2 text-base h-13 px-8 rounded-xl bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] outline-none"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("buttons.getStarted")} <ArrowRight size={18} />
+                  Get Started Free <ArrowRight size={18} />
                 </Button>
               </a>
               <a
@@ -145,7 +142,7 @@ const HeroSection = () => {
                   className="text-base h-13 px-8 rounded-xl border-2 border-[hsl(160,84%,39%)] text-[hsl(160,84%,39%)] bg-transparent hover:bg-[hsl(160,84%,39%)]/10 hover:text-[hsl(160,84%,39%)]"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("buttons.seeHow")}
+                  See How It Works
                 </Button>
               </a>
             </div>
@@ -158,13 +155,13 @@ const HeroSection = () => {
                   "https://randomuser.me/api/portraits/women/68.jpg",
                   "https://randomuser.me/api/portraits/men/75.jpg",
                 ].map((src, i) => (
-                  <Image 
-                    key={i} 
-                    src={src} 
-                    alt={t("avatarAlt", { index: i + 1 })} 
+                  <Image
+                    key={i}
+                    src={src}
+                    alt={`Customer avatar ${i + 1}`}
                     width={40}
                     height={40}
-                    className="w-10 h-10 rounded-full border-2 border-[hsl(215,28%,12%)] object-cover" 
+                    className="w-10 h-10 rounded-full border-2 border-[hsl(215,28%,12%)] object-cover"
                     priority={i < 2} // Preload the first two avatars for LCP
                   />
                 ))}
@@ -179,7 +176,7 @@ const HeroSection = () => {
                   className="text-xs text-white/40"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("socialProof")}
+                  Trusted by 50,000+ customers
                 </p>
               </div>
             </div>
@@ -221,7 +218,7 @@ const HeroSection = () => {
                       className="text-white/40 text-xs"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("floatingCards.deposits.label")}
+                      All Deposits
                     </p>
                     <p
                       className="text-white text-2xl font-bold"
@@ -255,13 +252,13 @@ const HeroSection = () => {
                     className="text-white font-semibold text-sm"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("floatingCards.approval.title")}
+                    Loan Approved!
                   </p>
                   <p
                     className="text-white/40 text-xs"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    {t("floatingCards.approval.details")}
+                    $25,000 • Low Rate
                   </p>
                 </div>
               </div>
@@ -274,7 +271,7 @@ const HeroSection = () => {
                   className="text-white/40 text-xs mb-1"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("floatingCards.creditScore.label")}
+                  Credit Score
                 </p>
                 <p
                   className="text-[hsl(160,84%,39%)] text-3xl font-bold"
@@ -286,7 +283,7 @@ const HeroSection = () => {
                   className="text-[hsl(160,84%,39%)]/60 text-xs mt-1"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  {t("floatingCards.creditScore.rating")}
+                  Excellent ↑
                 </p>
               </div>
             </FloatingCard>
@@ -304,7 +301,7 @@ const HeroSection = () => {
                         className="text-white font-semibold text-sm"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
-                        {t("floatingCards.card.title")}
+                        Smart Wealth Card
                       </p>
                       <p
                         className="text-white/40 text-xs"
@@ -320,7 +317,7 @@ const HeroSection = () => {
                       className="text-[hsl(160,84%,39%)] text-xs font-medium"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {t("floatingCards.card.secured")}
+                      Secured
                     </span>
                   </div>
                 </div>

@@ -3,12 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 
 const CTASection = () => {
-  const t = useTranslations("ctaSection");
-
   // Floating bubble animations
   const floatingBlob1: any = {
     x: [0, 30, -20, 0],
@@ -139,12 +136,12 @@ const CTASection = () => {
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-4 font-space-grotesk"
             >
-              {t("heading")}
+              Ready to Get Your Loan?
             </h2>
             <p
               className="text-white/60 text-lg mb-8 max-w-lg mx-auto font-dm-sans"
             >
-              {t("description")}
+              Join thousands of satisfied customers. Apply today and get funded within 24 hours.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -166,7 +163,7 @@ const CTASection = () => {
                   size="lg"
                   className="gap-2 bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] outline-none rounded-md px-8 py-3 font-dm-sans"
                 >
-                  {t("applyButton")} <ArrowRight size={18} />
+                  Apply Now <ArrowRight size={18} />
                 </Button>
               </a>
               <Link href="/contact">
@@ -175,7 +172,7 @@ const CTASection = () => {
                   size="lg"
                   className="border-2 border-[hsl(160,84%,39%)] text-[hsl(160,84%,39%)] bg-transparent hover:bg-[hsl(160,84%,39%)]/10 hover:text-[hsl(160,84%,39%)] rounded-md px-8 py-3 font-dm-sans"
                 >
-                  {t("expertButton")}
+                  Talk to an Expert
                 </Button>
               </Link>
             </div>
