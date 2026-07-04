@@ -13,7 +13,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import CTASection from "@/components/sections/cta-section";
+import CTASection from "@/components/home/cta-section";
 import Image from "next/image";
 
 const container = {

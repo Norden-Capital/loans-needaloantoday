@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight, Zap } from "lucide-react";
 import Image from "next/image";
@@ -7,20 +5,20 @@ import Image from "next/image";
 const footerLinks = {
   Company: [
     { label: "About Us", href: "/about" },
-    { label: "Resources", href: "/coming-soon" },
-    { label: "Loans", href: "/coming-soon" },
-    { label: "Blog", href: "/coming-soon" },
+    { label: "Resources", href: "/resources" },
+    { label: "Loans", href: "/loans" },
+    { label: "Guides", href: "/resources/guides" },
   ],
   Products: [
-    { label: "Home Loans", href: "/coming-soon" },
-    { label: "Business Loans", href: "/coming-soon" },
-    { label: "Education Loans", href: "/coming-soon" },
-    { label: "Personal Loans", href: "/coming-soon" },
+    { label: "Personal Loans", href: "/loans/by-type/personal-loans" },
+    { label: "Emergency Loans", href: "/loans/by-type/emergency-loans" },
+    { label: "Bad Credit Loans", href: "/loans/by-type/bad-credit-loans" },
+    { label: "Debt Consolidation Loans", href: "/loans/by-type/debt-consolidation-loans" },
   ],
   Support: [
     { label: "Help Center", href: "/contact" },
     { label: "Contact Us", href: "/contact" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "FAQ", href: "/resources/faq" },
     { label: "Feedback", href: "/#testimonials" },
   ],
   Legal: [
