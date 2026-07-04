@@ -25,6 +25,7 @@ const CountdownBanner = ({ isVisible, setIsVisible }: CountdownBannerProps) => {
     seconds: 0,
   });
   const [currentDay, setCurrentDay] = useState(0);
+  const [ready, setReady] = useState(false);
 
   const calculateTimeUntilEndOfDay = () => {
     const now = new Date();
@@ -50,6 +51,7 @@ const CountdownBanner = ({ isVisible, setIsVisible }: CountdownBannerProps) => {
   useEffect(() => {
     const initialTime = calculateTimeUntilEndOfDay();
     setTimeLeft(initialTime);
+    setReady(true);
 
     const timer = setInterval(() => {
       const newTime = calculateTimeUntilEndOfDay();
@@ -61,7 +63,7 @@ const CountdownBanner = ({ isVisible, setIsVisible }: CountdownBannerProps) => {
 
   if (!isVisible) return null;
 
-  const formatNumber = (num: number) => num.toString().padStart(2, "0");
+  const formatNumber = (num: number) => (ready ? num.toString().padStart(2, "0") : "--");
 
   return (
     <div
