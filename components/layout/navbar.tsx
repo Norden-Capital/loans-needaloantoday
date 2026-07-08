@@ -289,6 +289,28 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 </div>
               </div>
 
+              {/* Blog Link */}
+              <Link
+                href="/blog"
+                className="text-sm font-medium transition-colors py-2 text-white/70 hover:text-[hsl(160,84%,39%)]"
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                }}
+              >
+                Blog
+              </Link>
+
+              {/* News Link */}
+              <Link
+                href="/news"
+                className="text-sm font-medium transition-colors py-2 text-white/70 hover:text-[hsl(160,84%,39%)]"
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                }}
+              >
+                News
+              </Link>
+
               {/* About Us Link */}
               <Link
                 href="/about"
@@ -426,6 +448,8 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
 
                 {/* Mobile Static Links */}
                 {[
+                  { label: "Blog", href: "/blog" },
+                  { label: "News", href: "/news" },
                   { label: "About Us", href: "/about" },
                   { label: "Contact", href: "/contact" },
                 ].map((link) => (
