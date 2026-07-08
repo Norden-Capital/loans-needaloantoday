@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: "Get instant personal loans with competitive rates and same-day approval. AI-powered application, secure process, and trusted lending solutions for Canadians.",
     creator: "@needaloantoday",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   other: {
     "contact": "hello@needaloantoday.com",
     "phone": "+1-800-555-LOAN",
