@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
+import { PostImage } from "@/components/blog/post-image";
 import rehypeRaw from "rehype-raw";
 import { ArrowUpRight } from "lucide-react";
 import CTASection from "@/components/home/cta-section";
@@ -120,7 +121,7 @@ export default async function NewsArticlePage({ params }: { params: Params }) {
       )}
 
       {/* Header */}
-      <section className="pt-12 pb-14 md:pt-16 md:pb-18 bg-[hsl(215,28%,12%)] relative overflow-hidden">
+      <section className="pt-12 pb-14 md:pt-16 md:pb-18 bg-[hsl(215,28%,12%)] relative overflow-x-clip">
         <div className="absolute inset-0 bg-dot-grid opacity-40" />
         <div className="absolute -top-32 right-0 w-96 h-96 bg-[hsl(160,84%,39%)]/8 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
@@ -158,7 +159,7 @@ export default async function NewsArticlePage({ params }: { params: Params }) {
           <article className="min-w-0 w-full max-w-[760px] mx-auto lg:mx-0">
             <TableOfContents items={toc} variant="mobile" />
             <div className="blog-prose prose prose-lg max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]} components={{ img: PostImage }}>
                 {content}
               </ReactMarkdown>
             </div>
