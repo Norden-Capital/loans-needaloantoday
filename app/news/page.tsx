@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "application/rss+xml": `${baseUrl}/news/feed.xml`,
     },
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     type: "website",
     url: `${baseUrl}/news`,
     title,

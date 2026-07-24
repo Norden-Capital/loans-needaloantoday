@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     type: "website",
     url: "https://needaloantoday.ca/",
     title: "NeedALoanToday - Fast Personal Loans Canada",
