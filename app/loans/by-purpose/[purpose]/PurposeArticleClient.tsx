@@ -16,7 +16,7 @@ import type { LoanPurposeMeta } from "@/lib/loan-purposes";
 import { getOtherLoanPurposes } from "@/lib/loan-purposes";
 import { loanAmounts } from "@/lib/loan-amounts";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const trackClick = (label: string, slug: string) => {
   if (typeof window !== "undefined" && window.gtag) {
@@ -107,8 +107,6 @@ const PurposeArticleClient = ({
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => trackClick("Purpose Page Top CTA", entry.slug)}
             >
               Apply Now

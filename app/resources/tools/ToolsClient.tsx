@@ -9,7 +9,7 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const MIN_AMOUNT = 200;
 const MAX_AMOUNT = 5000;
@@ -282,8 +282,6 @@ const ToolsClient = () => {
               >
                 <a
                   href={APPLY_URL}
-                  target="_blank"
-                  rel="sponsored noopener noreferrer"
                   onClick={() => {
                     if (typeof window !== 'undefined' && window.gtag) {
                       window.gtag('event', 'loan_application_click', {

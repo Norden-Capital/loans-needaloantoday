@@ -10,7 +10,7 @@ import type { ComparisonEntry } from "@/lib/comparisons";
 import { exploreMoreLinks } from "@/lib/comparisons";
 import { comparisonIcons } from "@/lib/comparison-icons";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const ComparisonArticleClient = ({ entry }: { entry: ComparisonEntry }) => {
   const Icon = comparisonIcons[entry.icon];
@@ -77,8 +77,6 @@ const ComparisonArticleClient = ({ entry }: { entry: ComparisonEntry }) => {
             >
               <a
                 href={APPLY_URL}
-                target="_blank"
-                rel="sponsored noopener noreferrer"
                 onClick={() => {
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('event', 'loan_application_click', {

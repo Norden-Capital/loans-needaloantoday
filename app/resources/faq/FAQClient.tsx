@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { faqCategories } from "@/lib/faq-data";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 type FaqCategory = {
   title: string;
@@ -145,8 +145,6 @@ const FAQClient = () => {
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
                   window.gtag('event', 'loan_application_click', {

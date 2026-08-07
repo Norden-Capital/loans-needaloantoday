@@ -28,7 +28,7 @@ import {
   type LoanAmountEntry,
 } from "@/lib/loan-amounts";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const badges = [
   { icon: ShieldCheck, label: "Bank-Level Security" },
@@ -192,8 +192,6 @@ const AmountLoanClient = ({ entry }: { entry: LoanAmountEntry }) => {
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => trackClick("Amount Page Top CTA", slug)}
             >
               Apply Now
@@ -467,8 +465,6 @@ const AmountLoanClient = ({ entry }: { entry: LoanAmountEntry }) => {
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => trackClick("Amount Page Ready to Apply", slug)}
             >
               Check Your Rate Now

@@ -12,7 +12,7 @@ import type { ArticleContent } from "@/lib/content-blocks";
 import type { CanadaLocation } from "@/lib/canada-locations";
 import { getOtherProvinces } from "@/lib/canada-locations";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const relatedRegulationGuides: Record<string, string> = {
   ontario: "lending-regulations-ontario",

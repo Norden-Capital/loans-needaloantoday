@@ -24,7 +24,7 @@ import { getOtherCreditScores } from "@/lib/credit-scores";
 import { loanAmounts } from "@/lib/loan-amounts";
 import { loanPurposes } from "@/lib/loan-purposes";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const badges = [
   { icon: ShieldCheck, label: "Bank-Level Security" },
@@ -130,8 +130,6 @@ const CreditScoreArticleClient = ({ entry }: { entry: CreditScoreRange }) => {
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => trackClick("Credit Score Page Top CTA", entry.slug)}
             >
               Check Your Options

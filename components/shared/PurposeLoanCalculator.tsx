@@ -6,7 +6,7 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 
 const DEFAULT_ESTIMATE_APR = 19.99;
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const sliderColorClasses =
   "[&_[data-slot=slider-track]]:bg-white/15 [&_[data-slot=slider-range]]:bg-[hsl(160,84%,39%)] [&_[data-slot=slider-thumb]]:bg-[hsl(160,84%,39%)] [&_[data-slot=slider-thumb]]:border-white";
@@ -130,8 +130,6 @@ const PurposeLoanCalculator = ({
         >
           <a
             href={APPLY_URL}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
             onClick={() => {
               if (typeof window !== "undefined" && window.gtag) {
                 window.gtag("event", "loan_application_click", {

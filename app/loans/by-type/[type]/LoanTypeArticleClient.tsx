@@ -24,7 +24,7 @@ import type { LoanTypeMeta } from "@/lib/loan-types";
 import { getOtherLoanTypes } from "@/lib/loan-types";
 import { loanAmounts } from "@/lib/loan-amounts";
 
-const APPLY_URL = "https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=needaloantoday";
+const APPLY_URL = "/application-form";
 
 const badges = [
   { icon: ShieldCheck, label: "Bank-Level Security" },
@@ -130,8 +130,6 @@ const LoanTypeArticleClient = ({
           >
             <a
               href={APPLY_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
               onClick={() => trackClick("Loan Type Page Top CTA", entry.slug)}
             >
               Apply Now
