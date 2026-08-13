@@ -4,7 +4,7 @@ import { useState } from "react";
 import CountdownBanner from "./countdown-banner";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import CookieBanner from "./cookie-banner";
+import CookieBanner from "./CookieBanner";
 import ChatBot from "./chatbot";
 import LoanApprovalToasts from "./loan-approval-toasts";
 import ScrollToTop from "./scroll-to-top";
