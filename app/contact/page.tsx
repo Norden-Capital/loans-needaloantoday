@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -12,9 +12,7 @@ import {
   Building,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { ContactForm } from "@/components/contact/contact-form";
 
 const contactInfo = [
   {
@@ -67,18 +65,6 @@ const supportTopics = [
 ];
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder
-  };
 
   return (
     <div className="min-h-screen">
@@ -146,7 +132,7 @@ const ContactPage = () => {
               className="text-white/60 text-lg max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              Whether you have a question about a loan, need technical support, or want to explore a partnership — our team is ready to help.
+              Whether you have a question about a loan, need technical support, or want to explore a partnership â€” our team is ready to help.
             </p>
           </motion.div>
         </div>
@@ -266,110 +252,7 @@ const ContactPage = () => {
               >
                 {"Fill out the form below and we'll get back to you within 2 business hours."}
               </p>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      Full Name
-                    </label>
-                    <Input
-                      placeholder="John Doe"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="bg-white border-[hsl(214,20%,90%)] focus:ring-2 focus:ring-[hsl(160,84%,39%)] focus:border-transparent h-12"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      Email Address
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="john@example.com"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="bg-white border-[hsl(214,20%,90%)] focus:ring-2 focus:ring-[hsl(160,84%,39%)] focus:border-transparent h-12"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      Phone Number
-                    </label>
-                    <Input
-                      type="tel"
-                      placeholder="+1 (555) 000-0000"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                      className="bg-white border-[hsl(214,20%,90%)] focus:ring-2 focus:ring-[hsl(160,84%,39%)] focus:border-transparent h-12"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    >
-                      Subject
-                    </label>
-                    <Input
-                      placeholder="Loan inquiry"
-                      value={formData.subject}
-                      onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
-                      }
-                      className="bg-white border-[hsl(214,20%,90%)] focus:ring-2 focus:ring-[hsl(160,84%,39%)] focus:border-transparent h-12"
-                      style={{ fontFamily: "'DM Sans', sans-serif" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    className="text-sm font-medium text-[hsl(215,28%,12%)] mb-2 block"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}
-                  >
-                    Message
-                  </label>
-                  <Textarea
-                    placeholder="Tell us how we can help..."
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="bg-white border-[hsl(214,20%,90%)] focus:ring-2 focus:ring-[hsl(160,84%,39%)] focus:border-transparent resize-none h-101.25"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}
-                  />
-                </div>
-                <div className="flex justify-start sm:justify-end">
-                  <Button
-                    variant="default"
-                    size="lg"
-                    type="submit"
-                    className="gap-2 w-full sm:w-auto bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(210,25%,97%)] outline-none h-11 px-6 rounded-lg text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif" }}
-                  >
-                    Send Message <Send size={18} />
-                  </Button>
-                </div>
-              </form>
+              <ContactForm />
             </motion.div>
 
             {/* Support Topics */}

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @plugin "@tailwindcss/typography";
@@ -248,7 +248,7 @@ html { scroll-behavior: smooth; }
 .bg-dot-grid {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 22px 22px;
-}/* Blog/News tables — bordered, padded, zebra (desktop) + horizontal scroll (mobile) */
+}/* Blog/News tables â€” bordered, padded, zebra (desktop) + horizontal scroll (mobile) */
 .blog-prose table {
   width: 100%;
   border-collapse: collapse;
@@ -271,4 +271,11 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 640px) {
   .blog-prose table { display: block; overflow-x: auto; }
+}
+
+/* Reserve the scrollbar gutter so any overlay that locks body scroll can't
+   make the scrollbar vanish and shift the page sideways. The contact form's
+   topic field uses a native <select> precisely so it never locks scroll. */
+html {
+  scrollbar-gutter: stable;
 }
