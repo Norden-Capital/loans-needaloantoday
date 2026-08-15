@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -132,7 +132,7 @@ const ContactPage = () => {
               className="text-white/60 text-lg max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              Whether you have a question about a loan, need technical support, or want to explore a partnership â€” our team is ready to help.
+              Whether you have a question about a loan, need technical support, or want to explore a partnership — our team is ready to help.
             </p>
           </motion.div>
         </div>

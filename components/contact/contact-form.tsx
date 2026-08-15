@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 /* Contact form.
 
    Structure, field set and submission logic are UNIFIED across the network:
    same fields, same lib/contact.ts helper, same states. Only the STYLES block
-   below and the button markup are site-specific â€” this site keeps its own
+   below and the button markup are site-specific — this site keeps its own
    look on purpose, so the sites don't share a visual fingerprint.
 
    Site-specific email config lives in app/api/contact/route.ts.            */
@@ -28,7 +28,7 @@ const TOPICS = [
   "Something else",
 ];
 
-/* â”€â”€ Site styling â€” the only part that differs between sites â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Site styling — the only part that differs between sites ───────────── */
 const FONT: React.CSSProperties = { fontFamily: "'DM Sans', sans-serif" };
 
 const STYLES = {
@@ -41,7 +41,7 @@ const STYLES = {
   button:
     "gap-2 w-full sm:w-auto bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(210,25%,97%)] outline-none h-11 px-6 rounded-lg text-sm",
 };
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─────────────────────────────────────────────────────────────────────── */
 
 export function ContactForm() {
   const [status, setStatus] = useState<ContactStatus>("idle");
@@ -74,7 +74,7 @@ export function ContactForm() {
         </div>
         <h3 className="text-xl font-bold text-[hsl(215,28%,12%)] mb-2">Message sent</h3>
         <p className="text-sm text-[hsl(215,14%,46%)] max-w-xs leading-relaxed">
-          Thanks for reaching out â€” we&apos;ll get back to you within 2 business hours.
+          Thanks for reaching out — we&apos;ll get back to you within 2 business hours.
         </p>
         <button
           type="button"
@@ -185,7 +185,7 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Honeypot â€” hidden from people, frequently auto-filled by bots. */}
+      {/* Honeypot — hidden from people, frequently auto-filled by bots. */}
       <input
         type="text"
         name="company"
