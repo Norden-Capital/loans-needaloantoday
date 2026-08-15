@@ -145,28 +145,44 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <Label htmlFor="subject" className={STYLES.label} style={FONT}>
-            Subject
+          <Label htmlFor="phone" className={STYLES.label} style={FONT}>
+            Phone Number (optional)
           </Label>
-          <NativeSelect
-            id="subject"
-            name="subject"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            required
+          <Input
+            id="phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="+1 (555) 000-0000"
             disabled={isSubmitting}
             className={STYLES.field}
-          >
-            <option value="" disabled>
-              Loan inquiry
-            </option>
-            {TOPICS.map((topic) => (
-              <option key={topic} value={topic}>
-                {topic}
-              </option>
-            ))}
-          </NativeSelect>
+            style={FONT}
+          />
         </div>
+      </div>
+
+      <div>
+        <Label htmlFor="subject" className={STYLES.label} style={FONT}>
+          Subject
+        </Label>
+        <NativeSelect
+          id="subject"
+          name="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          required
+          disabled={isSubmitting}
+          className={STYLES.field}
+        >
+          <option value="" disabled>
+            Loan inquiry
+          </option>
+          {TOPICS.map((topic) => (
+            <option key={topic} value={topic}>
+              {topic}
+            </option>
+          ))}
+        </NativeSelect>
       </div>
 
       <div>

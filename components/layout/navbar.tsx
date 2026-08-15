@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   Menu, X, ChevronDown, ChevronRight, DollarSign, Target,
   CreditCard, FileText, MapPin, List, Calculator, Scale,
-  BookOpen, HelpCircle, Grid3x3
+  BookOpen, HelpCircle, Grid3x3, Newspaper, Rss
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -72,6 +72,18 @@ const resourcesDropdownItems = [
     title: "Guides",
     description: "Step-by-step loan guides",
     to: "/resources/guides",
+  },
+  {
+    icon: Newspaper,
+    title: "Blog",
+    description: "Rate news & borrowing tips",
+    to: "/blog",
+  },
+  {
+    icon: Rss,
+    title: "News",
+    description: "Loan & interest-rate updates",
+    to: "/news",
   },
   {
     icon: HelpCircle,
@@ -289,27 +301,7 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                 </div>
               </div>
 
-              {/* Blog Link */}
-              <Link
-                href="/blog"
-                className="text-sm font-medium transition-colors py-2 text-white/70 hover:text-[hsl(160,84%,39%)]"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                }}
-              >
-                Blog
-              </Link>
-
-              {/* News Link */}
-              <Link
-                href="/news"
-                className="text-sm font-medium transition-colors py-2 text-white/70 hover:text-[hsl(160,84%,39%)]"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                }}
-              >
-                News
-              </Link>
+              {/* Blog and News now live inside the Resources dropdown. */}
 
               {/* About Us Link */}
               <Link
@@ -444,10 +436,9 @@ const Navbar = ({ isBannerVisible }: NavbarProps) => {
                   </div>
                 </div>
 
-                {/* Mobile Static Links */}
+                {/* Mobile Static Links — Blog and News live inside the
+                    Resources accordion above. */}
                 {[
-                  { label: "Blog", href: "/blog" },
-                  { label: "News", href: "/news" },
                   { label: "About Us", href: "/about" },
                   { label: "Contact", href: "/contact" },
                 ].map((link) => (
