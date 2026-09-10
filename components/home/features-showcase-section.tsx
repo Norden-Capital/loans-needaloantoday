@@ -184,18 +184,7 @@ const FeaturesShowcase = () => {
 
                 {/* Push button to bottom */}
                 <div className="mt-auto">
-                  <a
-                    href="/application-form"
-                    onClick={() => {
-                      if (typeof window !== "undefined" && (window as any).gtag) {
-                        (window as any).gtag("event", "loan_application_click", {
-                          event_category: "engagement",
-                          event_label: "Features Card 1 View Dashboard",
-                          event_source: "features_showcase",
-                        });
-                      }
-                    }}
-                  >
+                  <a href="/application-form">
                     <Button
                       className="bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] w-full md:w-auto"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -278,18 +267,7 @@ const FeaturesShowcase = () => {
                 {/* Push button to bottom */}
                 <div className="mt-auto">
                   <div className="flex items-center gap-4">
-                    <a
-                      href="/application-form"
-                      onClick={() => {
-                        if (typeof window !== "undefined" && (window as any).gtag) {
-                          (window as any).gtag("event", "loan_application_click", {
-                            event_category: "engagement",
-                            event_label: "Features Card 2 Enable Alerts",
-                            event_source: "features_showcase",
-                          });
-                        }
-                      }}
-                    >
+                    <a href="/application-form">
                       <Button
                         className="bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)]"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}

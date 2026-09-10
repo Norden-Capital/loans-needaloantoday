@@ -45,16 +45,6 @@ const comparisonLinks = [
 
 const cityLinks = ["Toronto, ON", "Montreal, QC", "Calgary, AB", "Ottawa, ON", "Edmonton, AB", "Vancouver, BC"];
 
-const trackClick = (label: string, slug: string) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "loan_application_click", {
-      event_category: "engagement",
-      event_label: label,
-      event_source: `credit_score_${slug}`,
-    });
-  }
-};
-
 const CreditScoreArticleClient = ({ entry }: { entry: CreditScoreRange }) => {
   const otherRanges = getOtherCreditScores(entry.slug);
   const popularAmounts = [...loanAmounts].sort((a, b) => a.amount - b.amount).slice(0, 6);
@@ -128,10 +118,7 @@ const CreditScoreArticleClient = ({ entry }: { entry: CreditScoreRange }) => {
             className="rounded-xl ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] hover:scale-105 active:scale-95"
             style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
           >
-            <a
-              href={APPLY_URL}
-              onClick={() => trackClick("Credit Score Page Top CTA", entry.slug)}
-            >
+            <a href={APPLY_URL}>
               Check Your Options
               <ArrowRight />
             </a>
@@ -168,7 +155,6 @@ const CreditScoreArticleClient = ({ entry }: { entry: CreditScoreRange }) => {
           <DetailSidebarCta
             applyUrl={APPLY_URL}
             label="Check Your Options"
-            onApplyClick={() => trackClick("Credit Score Page Sidebar CTA", entry.slug)}
           />
         }
       >

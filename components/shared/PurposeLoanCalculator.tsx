@@ -27,7 +27,6 @@ const PurposeLoanCalculator = ({
   maxAmount = 5000,
   minTerm = 6,
   maxTerm = 72,
-  guideSlug,
   title,
   disclaimer,
   lockAmount = false,
@@ -40,7 +39,6 @@ const PurposeLoanCalculator = ({
   maxAmount?: number;
   minTerm?: number;
   maxTerm?: number;
-  guideSlug: string;
   title?: string;
   disclaimer?: string;
   lockAmount?: boolean;
@@ -128,18 +126,7 @@ const PurposeLoanCalculator = ({
           className="w-full rounded-xl ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] hover:scale-[1.02] active:scale-95"
           style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
         >
-          <a
-            href={APPLY_URL}
-            onClick={() => {
-              if (typeof window !== "undefined" && window.gtag) {
-                window.gtag("event", "loan_application_click", {
-                  event_category: "engagement",
-                  event_label: "Purpose Calculator CTA",
-                  event_source: `guide_${guideSlug}`,
-                });
-              }
-            }}
-          >
+          <a href={APPLY_URL}>
             Check Your Rate — No Credit Impact
             <ArrowRight />
           </a>

@@ -15,16 +15,6 @@ import { guideIcons } from "@/lib/guide-icons";
 
 const APPLY_URL = "/application-form";
 
-const trackClick = (label: string, slug: string) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "loan_application_click", {
-      event_category: "engagement",
-      event_label: label,
-      event_source: `guide_${slug}`,
-    });
-  }
-};
-
 const GuideArticleClient = ({
   entry,
   content,
@@ -106,7 +96,6 @@ const GuideArticleClient = ({
                 purposeLabel={entry.calculator.purposeLabel}
                 defaultAmount={entry.calculator.defaultAmount}
                 defaultTerm={entry.calculator.defaultTerm}
-                guideSlug={entry.slug}
               />
             </div>
           )}
@@ -129,10 +118,7 @@ const GuideArticleClient = ({
             className="rounded-full hover:scale-105 active:scale-95"
             style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
           >
-            <a
-              href={APPLY_URL}
-              onClick={() => trackClick("Guide Article Ready to Apply", entry.slug)}
-            >
+            <a href={APPLY_URL}>
               Check Your Rates Now
               <ArrowRight />
             </a>

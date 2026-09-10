@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Sans, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import MainLayout from "@/components/layout/main-layout";
-import Analytics from "@/components/analytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -91,9 +91,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Preconnect to improve GA loading times if/when triggered */}
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-
         {/* Structured Data — inline so it's present in the initial crawler-visible HTML */}
         <script
           type="application/ld+json"
@@ -151,7 +148,32 @@ export default function RootLayout({
 
       </head>
       <body className="min-h-full flex flex-col font-space-grotesk" suppressHydrationWarning>
-        <Analytics />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VCW7MGPC1S"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-VCW7MGPC1S');
+          `}
+        </Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "y1rmb88ote");
+          `}
+        </Script>
+
         <MainLayout>
           {children}
         </MainLayout>

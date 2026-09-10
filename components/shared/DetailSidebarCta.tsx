@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button";
 const DetailSidebarCta = ({
   applyUrl,
   label = "Apply Now",
-  onApplyClick,
 }: {
   applyUrl: string;
   label?: string;
-  onApplyClick?: () => void;
 }) => {
   return (
     <div
@@ -26,7 +24,7 @@ const DetailSidebarCta = ({
         className="w-full rounded-xl ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-white hover:scale-[1.02] active:scale-95"
         style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
       >
-        <a href={applyUrl} target="_blank" rel="sponsored noopener noreferrer" onClick={onApplyClick}>
+        <a href={applyUrl} target="_blank" rel="sponsored noopener noreferrer">
           {label}
           <ArrowRight />
         </a>

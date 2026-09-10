@@ -18,16 +18,6 @@ import { loanAmounts } from "@/lib/loan-amounts";
 
 const APPLY_URL = "/application-form";
 
-const trackClick = (label: string, slug: string) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "loan_application_click", {
-      event_category: "engagement",
-      event_label: label,
-      event_source: `purpose_${slug}`,
-    });
-  }
-};
-
 const PurposeArticleClient = ({
   entry,
   content,
@@ -105,10 +95,7 @@ const PurposeArticleClient = ({
             className="rounded-xl ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] hover:scale-105 active:scale-95"
             style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
           >
-            <a
-              href={APPLY_URL}
-              onClick={() => trackClick("Purpose Page Top CTA", entry.slug)}
-            >
+            <a href={APPLY_URL}>
               Apply Now
               <ArrowRight />
             </a>
@@ -144,11 +131,9 @@ const PurposeArticleClient = ({
               maxTerm={60}
               estimateApr={21}
               disclaimer="Based on 21% APR (CAD) • Max 35% APR in Canada"
-              guideSlug={`purpose-${entry.slug}`}
             />
             <DetailSidebarCta
               applyUrl={APPLY_URL}
-              onApplyClick={() => trackClick("Purpose Page Sidebar CTA", entry.slug)}
             />
           </>
         }

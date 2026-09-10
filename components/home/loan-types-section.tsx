@@ -147,18 +147,7 @@ const LoanTypesSection = () => {
                     >
                       {loan.range}
                     </span>
-                    <a
-                      href="/application-form"
-                      onClick={() => {
-                        if (typeof window !== "undefined" && (window as any).gtag) {
-                          (window as any).gtag("event", "loan_application_click", {
-                            event_category: "engagement",
-                            event_label: "Loan Types Apply Button",
-                            event_source: "loan_types_section",
-                          });
-                        }
-                      }}
-                    >
+                    <a href="/application-form">
                       <Button
                         variant="link"
                         className="text-[hsl(160,84%,39%)] p-0 h-auto text-sm hover:text-[hsl(160,84%,35%)]"
@@ -225,18 +214,7 @@ const LoanTypesSection = () => {
                     >
                       {loan.range}
                     </span>
-                    <a
-                      href="/application-form"
-                      onClick={() => {
-                        if (typeof window !== "undefined" && (window as any).gtag) {
-                          (window as any).gtag("event", "loan_application_click", {
-                            event_category: "engagement",
-                            event_label: "Loan Types Apply Button",
-                            event_source: "loan_types_section",
-                          });
-                        }
-                      }}
-                    >
+                    <a href="/application-form">
                       <Button
                         variant="link"
                         className="text-[hsl(160,84%,39%)] p-0 h-auto text-sm hover:text-[hsl(160,84%,35%)]"

@@ -105,18 +105,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-14 justify-center lg:justify-start">
-              <a
-                href="/application-form"
-                onClick={() => {
-                  if (typeof window !== "undefined" && (window as any).gtag) {
-                    (window as any).gtag("event", "loan_application_click", {
-                      event_category: "engagement",
-                      event_label: "Hero Get Started Button",
-                      event_source: "hero_section",
-                    });
-                  }
-                }}
-              >
+              <a href="/application-form">
                 <Button
                   size="lg"
                   className="gap-2 text-base h-13 px-8 rounded-xl bg-[hsl(160,84%,39%)] text-white hover:bg-[hsl(160,84%,35%)] ring-2 ring-[hsl(160,84%,39%)] ring-offset-2 ring-offset-[hsl(215,28%,12%)] outline-none"

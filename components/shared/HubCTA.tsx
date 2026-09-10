@@ -19,15 +19,6 @@ const HubCTA = () => {
       <div className="mt-8">
         <a
           href={APPLY_URL}
-          onClick={() => {
-            if (typeof window !== "undefined" && window.gtag) {
-              window.gtag("event", "loan_application_click", {
-                event_category: "engagement",
-                event_label: "Hub CTA Button",
-                event_source: "hub_cta",
-              });
-            }
-          }}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold font-space-grotesk transition-all duration-300 ease-out hover:scale-[1.02] active:scale-95"
           style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
         >

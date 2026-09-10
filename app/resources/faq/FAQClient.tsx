@@ -143,18 +143,7 @@ const FAQClient = () => {
             className="hover:scale-105 active:scale-95"
             style={{ backgroundColor: "hsl(160,84%,39%)", color: "#FFFFFF" }}
           >
-            <a
-              href={APPLY_URL}
-              onClick={() => {
-                if (typeof window !== 'undefined' && window.gtag) {
-                  window.gtag('event', 'loan_application_click', {
-                    event_category: 'engagement',
-                    event_label: 'FAQ Page CTA Button',
-                    event_source: 'faq_page',
-                  });
-                }
-              }}
-            >
+            <a href={APPLY_URL}>
               Apply Now
               <ArrowRight />
             </a>
