@@ -1,11 +1,25 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const baseUrl = 'https://needaloantoday.ca';
+import type { ArticleSection, FaqItem, PostMeta } from "@/lib/content";
+
+// ── Site details: the only part of this file that differs between sites ──
+
+export const SITE_NAME = "NeedALoanToday";
+export const BASE_URL = "https://needaloantoday.ca";
+
+/** Publisher logo in article structured data, or null if the site has none. */
+export const LOGO_URL: string | null = `${BASE_URL}/logo.svg`;
+
+/** Social image for pages without their own opengraph-image, or null. */
+export const DEFAULT_OG_IMAGE: { url: string; alt: string } | null = {
+  url: "/opengraph-image.png",
+  alt: "NeedALoanToday — Fast personal loans for Canadians.",
+};
 
 /**
- * Generates canonical metadata for a given path.
- * @param path The path of the page (e.g., '/about', '/contact', or '/' for homepage)
- * @returns Metadata object with the canonical alternate
+ * Site-specific: relative canonical for a path (resolved against the root
+ * layout's metadataBase). Used by the about, contact, privacy-policy and
+ * terms-of-use layouts.
  */
 export function getAlternateMetadata(path: string): Metadata["alternates"] {
   return {
@@ -14,9 +28,8 @@ export function getAlternateMetadata(path: string): Metadata["alternates"] {
 }
 
 /**
- * Generates BreadcrumbList structured data.
- * @param items List of breadcrumb items with name and path
- * @returns JSON-LD object for BreadcrumbList
+ * Site-specific: BreadcrumbList structured data used by the about and contact
+ * layouts. Unlike breadcrumbJsonLd below, it accepts paths without a leading "/".
  */
 export function getBreadcrumbSchema(items: { name: string, path: string }[]) {
   return {
@@ -26,7 +39,122 @@ export function getBreadcrumbSchema(items: { name: string, path: string }[]) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `${baseUrl}${item.path.startsWith('/') ? item.path : `/${item.path}`}`
+      "item": `${BASE_URL}${item.path.startsWith('/') ? item.path : `/${item.path}`}`
     }))
+  };
+}
+
+// ── Shared helpers: identical on every site ──
+
+/**
+ * Page metadata with an absolute canonical URL. Pass a short `title`: the brand
+ * is appended here ("Title | Brand") as an absolute title, so the result is the
+ * same whether or not the site's root layout has a title template.
+ *
+ * Pass `defaultImage: false` on pages that have their own opengraph-image file
+ * (blog and news posts): an image set here would replace the generated one.
+ */
+export function buildMetadata({
+  title,
+  description,
+  path,
+  keywords,
+  defaultImage = true,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  keywords?: string[];
+  defaultImage?: boolean;
+}): Metadata {
+  const url = `${BASE_URL}${path}`;
+  const fullTitle = `${title} | ${SITE_NAME}`;
+  const image = defaultImage ? DEFAULT_OG_IMAGE : null;
+
+  return {
+    title: { absolute: fullTitle },
+    description,
+    keywords,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      ...(image ? { images: [{ url: image.url, width: 1200, height: 630, alt: image.alt }] } : {}),
+      title: fullTitle,
+      description,
+      url,
+      siteName: SITE_NAME,
+      locale: "en_CA",
+      type: "website",
+    },
+    twitter: {
+      ...(image ? { images: [image.url] } : {}),
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+    },
+  };
+}
+
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map(({ name, path }, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name,
+      item: `${BASE_URL}${path}`,
+    })),
+  };
+}
+
+export function itemListJsonLd(section: ArticleSection, posts: PostMeta[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: posts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: post.title,
+      url: `${BASE_URL}${section.path}/${post.slug}`,
+    })),
+  };
+}
+
+export function articleJsonLd(meta: PostMeta, section: ArticleSection) {
+  const url = `${BASE_URL}${section.path}/${meta.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": section.schemaType,
+    headline: meta.title,
+    description: meta.description,
+    datePublished: meta.date,
+    dateModified: meta.updated,
+    ...(meta.image ? { image: meta.image } : {}),
+    author: { "@type": "Organization", name: meta.author },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: BASE_URL,
+      ...(LOGO_URL ? { logo: { "@type": "ImageObject", url: LOGO_URL } } : {}),
+    },
+    mainEntityOfPage: url,
+    url,
+  };
+}
+
+export function faqJsonLd(faqs: FaqItem[]) {
+  if (faqs.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
   };
 }
